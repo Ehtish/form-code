@@ -102,12 +102,6 @@ form {
   background-color: #b99696;
 }
 
-.addborder{
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 15px;
-}
-
 
 #step6 input,
 #step6 select {
@@ -148,6 +142,13 @@ form {
   .flex-row {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+  }
+  .flex-inline{
+    display: inline-flex;
+  }
+  .flex-inline label.cs-checkbox-label {
+    padding-left: 10px !important;
   }
 
   /* Flex Column with Equal Space */
@@ -261,3 +262,24 @@ form {
     color: #007bff;
     /* Color for checked checkbox label */
   }
+
+  input#authorizationCheckbox{
+    width: unset;
+  }
+
+
+#step7 p {
+    line-height: 20px;
+    font-size: 15px;
+    padding-block: 10px;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+  .flex-col-2,
+  .flex-col-3,
+  .flex-col-4 {
+      flex: 0 0 100%;
+      margin-right: 0;
+  }
+}

@@ -8,49 +8,6 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <title>Document</title>
 </head>
-<style>
-  .dealership-info-container {
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin-bottom: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    /* Adjust the gap between columns */
-  }
-
-  .dealership-info {
-    flex: 1;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .fields {
-    flex: 1;
-    width: calc(50% - 10px);
-    /* 50% width with gap */
-    box-sizing: border-box;
-  }
-
-  .fields label {
-    display: block;
-    margin-bottom: 5px;
-  }
-
-  .form-input {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-  }
-
-  .addborder {
-    border: 1px solid #ccc;
-  }
-
-  h3 {
-    margin-bottom: 10px;
-  }
-</style>
 
 <body>
   <div class="form-container">
@@ -128,14 +85,14 @@
       <input type="text" id="field5" name="field5" /> -->
 
       <!-- Reference Number and Customer Name -->
-      <div class="inputLayout">
-        <div class="fields">
+      <div class="flex-cont cs-br">
+        <div class="flex-col-2">
           <label for="referenceNumber">Reference Number:</label>
-          <input type="text" id="referenceNumber" name="referenceNumber" class="form-input" value="" />
+          <input type="text" id="referenceNumber" name="referenceNumber" class="cs-input" value="" />
         </div>
-        <div class="fields">
+        <div class="flex-col-2">
           <label for="customerName">Customer Name:</label>
-          <input type="text" id="customerName" name="customerName" class="form-input" value="" />
+          <input type="text" id="customerName" name="customerName" class="cs-input" value="" />
         </div>
       </div>
 
@@ -253,114 +210,116 @@
 
     <!-- Step 6 -->
     <form id="step6" class="form-step">
-      <h2>Step 6</h2>
+      <h2>Step 6-CUSTOMER SERVICE DEPARTMENT</h2>
       <!-- <label for="field6">Field 6:</label>
         <input type="text" id="field6" name="field6" /> -->
 
       <!-- Attention and Fax Information -->
       <div class="info">
         <p>
-          <strong>ATTENTION: CUSTOMER SERVICE DEPARTMENT</strong><br />
+          <strong>Attention</strong><br />
           Please fax all payout requests to: 613-690-4948<br />
           For inquiries by phone, please call: 1-877-390-3864
         </p>
       </div>
 
       <!-- Date -->
-      <label for="date">Date:</label>
-      <input type="text" id="date" name="date" placeholder="MM/DD/YYYY" class="form-input" value="" />
-
+      <div class="flex-cont cs-br">
+        <label for="date">Date:</label>
+        <input type="text" id="date" name="date" placeholder="MM/DD/YYYY" class="cs-input" value="" />
+      </div>
       <!-- Dealership Information -->
-      <div class="dealership-info-container addborder">
+      <div class="flex-cont cs-br">
         <h3>Dealership Information</h3>
-        <div class="dealership-info">
-          <div class="fields">
+        <div class="flex-row">
+          <div class="flex-col-2">
             <label for="dealershipName">Dealership Name:</label>
-            <input type="text" id="dealershipName" name="dealershipName" class="form-input" value="" />
+            <input type="text" id="dealershipName" name="dealershipName" class="cs-input" value="" />
           </div>
 
-          <div class="fields">
+          <div class="flex-col-2">
             <label for="contactName">Contact Name:</label>
-            <input type="text" id="contactName" name="contactName" class="form-input" value="" />
+            <input type="text" id="contactName" name="contactName" class="cs-input" value="" />
           </div>
 
-          <div class="fields">
+          <div class="flex-col-2">
             <label for="faxNumber">Fax Number:</label>
-            <input type="tel" id="faxNumber" name="faxNumber" class="form-input" value="" />
+            <input type="tel" id="faxNumber" name="faxNumber" class="cs-input" value="" />
           </div>
 
-          <div class="fields">
+          <div class="flex-col-2">
             <label for="phoneNumber">Phone Number:</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" class="form-input" value="" />
+            <input type="tel" id="phoneNumber" name="phoneNumber" class="cs-input" value="" />
           </div>
         </div>
       </div>
 
       <!-- Customer Information -->
-      <div class="addborder">
+      <div class="flex-cont cs-br">
         <h3>Customer Information</h3>
-        <div class="fields">
-          <label for="customerName">Customer Name:</label>
-          <input type="text" id="customerName" name="customerName" class="form-input" value="" />
-        </div>
+        <div class="flex-row">
+          <div class="flex-col-2">
+            <label for="customerName">Customer Name:</label>
+            <input type="text" id="customerName" name="customerName" class="cs-input" value="" />
+          </div>
 
-        <div class="fields">
-          <label for="customerPhoneNumber">Phone Number:</label>
-          <input type="tel" id="customerPhoneNumber" name="customerPhoneNumber" class="form-input" value="" />
-        </div>
+          <div class="flex-col-2">
+            <label for="customerPhoneNumber">Phone Number:</label>
+            <input type="tel" id="customerPhoneNumber" name="customerPhoneNumber" class="cs-input" value="" />
+          </div>
 
-        <div class="fields">
-          <label for="customerAddress">Full Address:</label>
-          <textarea id="customerAddress" name="customerAddress" class="form-input"></textarea>
-        </div>
+          <div class="flex-col-2">
+            <label for="customerAddress">Full Address:</label>
+            <textarea id="customerAddress" name="customerAddress" class="cs-textarea"></textarea>
+          </div>
 
-        <div class="fields">
-          <label for="loanNumber">Loan Number:</label>
-          <input type="text" id="loanNumber" name="loanNumber" class="form-input" value="" />
+          <div class="flex-col-2">
+            <label for="loanNumber">Loan Number:</label>
+            <input type="text" id="loanNumber" name="loanNumber" class="cs-input" value="" />
+          </div>
         </div>
       </div>
 
       <!-- Vehicle Information -->
-      <div class="addborder">
+      <div class="flex-cont cs-br">
         <h3>Vehicle Information</h3>
-        <div class="fields">
-          <label for="vehicleYear">Year:</label>
-          <input type="text" id="vehicleYear" name="vehicleYear" class="form-input" value="" />
-        </div>
+        <div class="flex-cont">
+          <div class="flex-col-2">
+            <label for="vehicleYear">Year:</label>
+            <input type="text" id="vehicleYear" name="vehicleYear" class="cs-input" value="" />
+          </div>
 
-        <div class="fields">
-          <label for="vehicleMake">Make:</label>
-          <input type="text" id="vehicleMake" name="vehicleMake" class="form-input" value="" />
-        </div>
+          <div class="flex-col-2">
+            <label for="vehicleMake">Make:</label>
+            <input type="text" id="vehicleMake" name="vehicleMake" class="cs-input" value="" />
+          </div>
 
-        <div class="fields">
-          <label for="vehicleModel">Model:</label>
-          <input type="text" id="vehicleModel" name="vehicleModel" class="form-input" value="" />
-        </div>
+          <div class="flex-col-2">
+            <label for="vehicleModel">Model:</label>
+            <input type="text" id="vehicleModel" name="vehicleModel" class="cs-input" value="" />
+          </div>
 
-        <div class="fields">
-          <label for="vinNumber">VIN #:</label>
-          <input type="text" id="vinNumber" name="vinNumber" class="form-input" value="" />
+          <div class="flex-col-2">
+            <label for="vinNumber">VIN #:</label>
+            <input type="text" id="vinNumber" name="vinNumber" class="cs-input" value="" />
+          </div>
         </div>
       </div>
 
-      <!-- Authorization -->
-      <div class="addborder">
-        <h3>Authorization</h3>
-        <div class="fields">
+      <!-- Authorzation -->
+      <div class="flex-cont cs-br">
+        <div class="flex-col">
           <label for="customerSignature">Customer Signature:</label>
-          <input type="text" id="customerSignature" name="customerSignature" class="form-input" value="" />
+          <input type="text" id="customerSignature" name="customerSignature" class="cs-input" value="" />
         </div>
-
-        <p>
-          <label for="authorizationCheckbox">
-            <input type="checkbox" id="authorizationCheckbox" name="authorizationCheckbox" class="form-checkbox"
-              value="" />
-            I authorize the release of loan payout information to the above
-            noted dealership
-          </label>
-        </p>
+        <div class="flex-inline cs-checklist-item">
+          <input type="checkbox" id="authorizationCheckbox" name="authorizationCheckbox" class="cs-checkbox" value="" />
+          <label for="authorizationCheckbox" class="cs-checkbox-label">I authorize the release of loan payout
+            information to the above noted dealership</label>
+        </div>
       </div>
+
+
       <div class="navigation-buttons">
         <button type="button" onclick="previousStep('step6', 'step5')">
           Previous
@@ -373,9 +332,61 @@
 
     <!-- Step 7 -->
     <form id="step7" class="form-step">
-      <h2>Step 7</h2>
-      <label for="field7">Field 7:</label>
-      <input type="text" id="field7" name="field7" />
+      <h2>Step 7 - Customer Notice of Cancellation Request Form</h2>
+      <p>Please accept this letter as notice of cancellation of all other deals approved by FinQuest Pro Ltd. as I/we
+        wish to proceed with the following purchase as detailed below.</p>
+
+      <div class="flex-cont cs-br">
+
+        <div class="flex-col-2">
+          <label for="fundingDealersName">Funding Dealer’s Name:</label>
+          <input type="text" id="fundingDealersName" name="fundingDealersName" class="cs-input" value="" />
+        </div>
+
+        <div class="flex-col-2">
+          <label for="referenceNumber">Reference Number:</label>
+          <input type="text" id="referenceNumber" name="referenceNumber" class="cs-input" value="" />
+        </div>
+
+        <div class="flex-col-2">
+          <label for="vehicleDetails">Vehicle make/model/year:</label>
+          <input type="text" id="vehicleDetails" name="vehicleDetails" class="cs-input" value="" />
+        </div>
+
+        <div class="flex-col-2">
+          <label for="vinNumber">VIN Number:</label>
+          <input type="text" id="vinNumber" name="vinNumber" class="cs-input" value="" />
+        </div>
+      </div>
+
+      <div class="flex-row cs-br">
+
+        <div class="flex-col">
+          <label for="datePicker">Select Date:</label>
+          <input type="date" id="datePicker" name="datePicker" value="" class="cs-input" />
+        </div>
+
+        <div class="flex-col-2">
+          <label for="customersName">Customer’s Name:</label>
+          <input type="text" id="customersName" name="customersName" class="cs-input" value="" />
+        </div>
+
+        <div class="flex-col-2">
+          <label for="customersSignature">Customer’s Signature:</label>
+          <input type="text" id="customersSignature" name="customersSignature" class="cs-input" value="" />
+        </div>
+
+        <div class="flex-col-2">
+          <label for="coBorrowersName">Co-Borrower’s Name:</label>
+          <input type="text" id="coBorrowersName" name="coBorrowersName" class="cs-input" value="" />
+        </div>
+
+        <div class="flex-col-2">
+          <label for="coBorrowersSignature">Co-Borrower’s Signature:</label>
+          <input type="text" id="coBorrowersSignature" name="coBorrowersSignature" class="cs-input" value="" />
+        </div>
+      </div>
+
       <div class="navigation-buttons">
         <button type="button" onclick="previousStep('step7', 'step6')">
           Previous
@@ -385,6 +396,7 @@
         </button>
       </div>
     </form>
+
 
     <!-- Step 8 -->
     <form id="step8" class="form-step">

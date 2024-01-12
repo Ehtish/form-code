@@ -30,7 +30,6 @@ body {
   box-sizing: border-box;
 }
 form {
-  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -89,7 +88,7 @@ form {
   padding-block: 6px;
 }
 
-#step5 p,
+p,
 #step5 .checklist {
   line-height: 20px;
   font-size: 15px;
@@ -102,7 +101,6 @@ form {
   background-color: #b99696;
 }
 
-
 #step6 input,
 #step6 select {
   width: 100%;
@@ -111,175 +109,182 @@ form {
   box-sizing: border-box;
   font-size: 14px;
 }
-.dealership-info{
+.dealership-info {
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-
 /* Layout convenient css */
-  /* Flex Container */
-  .flex-cont {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    /* Adjust as needed */
-
-  }
-
-  .cs-br {
-    border: 1px solid #ccc;
-    /* Border color and thickness */
-    padding: 20px;
-    /* Optional padding for better appearance */
-    box-sizing: border-box;
-    /* Include padding and border in the element's total width and height */
-  }
-
-  /* Flex Row */
-  .flex-row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  .flex-inline{
-    display: inline-flex;
-  }
-  .flex-inline label.cs-checkbox-label {
-    padding-left: 10px !important;
-  }
-
-  /* Flex Column with Equal Space */
-  .flex-col {
-    flex: 1;
-    box-sizing: border-box;
-    margin-right: 2%;
-    /* Adjust as needed */
-  }
-
-  /* Flex Column */
-  .flex-col-2 {
-    flex: 0 0 48%;
-    /* Adjust as needed */
-    box-sizing: border-box;
-    margin-right: 2%;
-    /* Adjust as needed */
-  }
-
-  .flex-col-3 {
-    flex: 0 0 31%;
-    /* Adjust as needed */
-    box-sizing: border-box;
-    margin-right: 2%;
-    /* Adjust as needed */
-  }
-
-  .flex-col-4 {
-    flex: 0 0 23%;
-    /* Adjust as needed */
-    box-sizing: border-box;
-    margin-right: 2%;
-    /* Adjust as needed */
-  }
-
-  /* Global Input Styles */
-  .cs-input {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-  }
-
-  /* Additional Input Styles */
-  .cs-input {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-
-  /* Additional Input Styles */
-  .cs-input:focus {
-    outline: none;
-    border-color: #000000;
-    box-shadow: 0 0 5px rgba(54, 53, 53, 0.5);
-  }
-
-
-
-  /* Global Label Styles */
-  .cs-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333333;
-    /* Label text color */
-  }
-
-  /* Global Textarea Styles */
-  .cs-textarea {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    /* Default border color */
-    border-radius: 5px;
-  }
-
-  .cs-textarea:focus {
-    outline: none;
-    border-color: #000000;
-    /* Focus border color */
-    box-shadow: 0 0 5px rgba(54, 53, 53, 0.5);
-    /* Focus box shadow */
-  }
-
-  /* Global Checkbox Styles */
-  .cs-checkbox {
-    margin-bottom: 10px;
-  }
-
-  .cs-checkbox .cs-checkbox-label {
-    display: inline-block;
-    margin-left: 5px;
-    color: #333333;
-    /* Checkbox label text color */
-  }
-
-  /* Global Checklist Styles */
-  .cs-checklist {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .cs-checklist-item {
-    margin-bottom: 10px;
-  }
-
-  /* Additional styling for checked checkboxes */
-  .cs-checklist-item .cs-checkbox:checked+.cs-checkbox-label {
-    color: #007bff;
-    /* Color for checked checkbox label */
-  }
-
-  input#authorizationCheckbox{
-    width: unset;
-  }
-
-
-#step7 p {
-    line-height: 20px;
-    font-size: 15px;
-    padding-block: 10px;
+/* Flex Container */
+.flex-cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* Adjust as needed */
 }
 
+.cs-br {
+  border: 1px solid #ccc;
+  /* Border color and thickness */
+  padding: 20px;
+  /* Optional padding for better appearance */
+  box-sizing: border-box;
+  /* Include padding and border in the element's total width and height */
+}
+
+/* Flex Row */
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.flex-inline {
+  display: inline-flex;
+}
+.flex-inline label.cs-checkbox-label {
+  padding-left: 10px !important;
+}
+
+/* Flex Column with Equal Space */
+.flex-col {
+  flex: 1;
+  box-sizing: border-box;
+  margin-right: 2%;
+  /* Adjust as needed */
+}
+
+/* Flex Column */
+.flex-col-2 {
+  flex: 0 0 48%;
+  /* Adjust as needed */
+  box-sizing: border-box;
+  margin-right: 2%;
+  /* Adjust as needed */
+}
+
+.flex-col-3 {
+  flex: 0 0 31%;
+  /* Adjust as needed */
+  box-sizing: border-box;
+  margin-right: 2%;
+  /* Adjust as needed */
+}
+
+.flex-col-4 {
+  flex: 0 0 23%;
+  /* Adjust as needed */
+  box-sizing: border-box;
+  margin-right: 2%;
+  /* Adjust as needed */
+}
+
+/* Global Input Styles */
+.cs-input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+/* Additional Input Styles */
+.cs-input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Additional Input Styles */
+.cs-input:focus {
+  outline: none;
+  border-color: #000000;
+  box-shadow: 0 0 5px rgba(54, 53, 53, 0.5);
+}
+
+/* Global Label Styles */
+.cs-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333333;
+  /* Label text color */
+}
+
+/* Global Textarea Styles */
+.cs-textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  /* Default border color */
+  border-radius: 5px;
+}
+
+.cs-textarea:focus {
+  outline: none;
+  border-color: #000000;
+  /* Focus border color */
+  box-shadow: 0 0 5px rgba(54, 53, 53, 0.5);
+  /* Focus box shadow */
+}
+
+/* Global Checkbox Styles */
+.cs-checkbox {
+  margin-bottom: 10px;
+}
+
+.cs-checkbox .cs-checkbox-label {
+  display: inline-block;
+  margin-left: 5px;
+  color: #333333;
+  /* Checkbox label text color */
+}
+
+/* Global Checklist Styles */
+.cs-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cs-checklist-item {
+  margin-bottom: 10px;
+}
+
+/* Additional styling for checked checkboxes */
+.cs-checklist-item .cs-checkbox:checked + .cs-checkbox-label {
+  color: #007bff;
+  /* Color for checked checkbox label */
+}
+
+input#authorizationCheckbox {
+  width: unset;
+}
+
+#step7 p {
+  padding-block: 10px;
+}
+
+#step12 ol {
+  padding: 20px;
+}
+
+#step12 ol li {
+  padding-block: 10px;
+}
+
+.pd-10{
+  padding-block: 10px;
+}
+.w-100{
+  width: 100%;
+}
 /* Media query for mobile responsiveness */
 @media (max-width: 768px) {
   .flex-col-2,
   .flex-col-3,
   .flex-col-4 {
-      flex: 0 0 100%;
-      margin-right: 0;
+    flex: 0 0 100%;
+    margin-right: 0;
   }
 }

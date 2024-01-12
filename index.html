@@ -1,131 +1,12 @@
-.form-container {
-  position: relative;
-  padding-top: 30px; /* Adjusted to accommodate the progress bar */
-}
+<!DOCTYPE html>
+<html lang="en">
 
-.form-step {
-  display: none;
-}
-
-.form-step.active {
-  display: block;
-}
-.navigation-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
-.navigation-buttons button {
-  padding: 8px 16px;
-  font-size: 14px;
-}
-/* my code */
-body {
-  font-family: Arial, sans-serif;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-form {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-#step9 label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-#step9 input,
-#step9 select {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-
-#step9 .reference-section {
-  border: 1px solid #ccc;
-  padding: 0 7px;
-  /* margin-bottom: 20px; */
-}
-
-#step9 .reference-section h4 {
-  margin-top: 5px;
-}
-#step9 .reference-number {
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.inputLayout,
-.reference-number {
-  display: flex;
-  gap: 5px;
-}
-
-.reference-number {
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.fields {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#step5 .checklist {
-  padding-block: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-#step5 .checklist div {
-  padding-block: 6px;
-}
-
-#step5 p,
-#step5 .checklist {
-  line-height: 20px;
-  font-size: 15px;
-}
-#step5 .info,
-#step6 .info {
-  padding: 2px 1px;
-  border: 1px solid #535050;
-  margin: 10px 0;
-  background-color: #b99696;
-}
-
-.addborder{
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 15px;
-}
-
-
-#step6 input,
-#step6 select {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-.dealership-info{
-  display: flex;
-  gap: 5px;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-
-/* Layout convenient css */
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>my form</title>
+</head>
+<style>
   /* Flex Container */
   .flex-cont {
     display: flex;
@@ -261,3 +142,50 @@ form {
     color: #007bff;
     /* Color for checked checkbox label */
   }
+</style>
+
+<body>
+  <!-- Step 8 -->
+  <form id="step8" class="form-step">
+    <h2>Step 8</h2>
+    <div class="flex-cont cs-br">
+      <div class="flex-row">
+        <div class="flex-col-2">
+          <label for="cs-label"> 8:</label>
+          <input type="text" id="8" name="8" class="cs-input" />
+        </div>
+        <div class="flex-col-2">
+          <label for="8"> 8:</label>
+          <input type="text" id="8" name="8" class="cs-input" />
+        </div>
+      </div>
+    </div>
+    <div class="flex-cont cs-br">
+      <div class="flex-col">
+        <div class="cs-checklist-item">
+          <input type="checkbox" class="cs-checkbox" id="item1" />
+          <label class="cs-checkbox-label" for="item1">Item 1</label>
+        </div>
+        <div class="cs-checklist-item">
+          <input type="checkbox" class="cs-checkbox" id="item2" />
+          <label class="cs-checkbox-label" for="item2">Item 2</label>
+        </div>
+        <div class="cs-checklist-item">
+          <input type="checkbox" class="cs-checkbox" id="item3" />
+          <label class="cs-checkbox-label" for="item3">Item 3</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="navigation-buttons">
+      <button type="button" onclick="previousStep('step8', 'step7')">
+        Previous
+      </button>
+      <button type="button" onclick="nextStep('step8', 'step9')">
+        Next
+      </button>
+    </div>
+  </form>
+</body>
+
+</html>

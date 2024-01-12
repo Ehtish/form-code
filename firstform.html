@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <title>Document</title>
+</head>
+<style>
+  .dealership-info-container {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px; /* Adjust the gap between columns */
+  }
+
+  .dealership-info {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  .fields {
+      flex: 1;
+      width: calc(50% - 10px); /* 50% width with gap */
+      box-sizing: border-box;
+  }
+
+  .fields label {
+      display: block;
+      margin-bottom: 5px;
+  }
+
+  .form-input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+  }
+
+  .addborder {
+      border: 1px solid #ccc;
+  }
+
+  h3 {
+      margin-bottom: 10px;
+  }
+</style>
+<body>
+  <div class="form-container">
+    <!-- Step 1 -->
+    <form id="step1" class="form-step active">
+      <h2>Step 1</h2>
+      <label for="field1">Field 1:</label>
+      <input type="text" id="field1" name="field1" />
+      <div class="navigation-buttons">
+        <button type="button" onclick="previousStep('step1', 'step1')">
+          Previous
+        </button>
+        <button type="button" onclick="nextStep('step1', 'step2')">
+          Next
+        </button>
+      </div>
+    </form>
+
+    <!-- Step 2 -->
+    <form id="step2" class="form-step">
+      <h2>Step 2</h2>
+      <label for="field2">Field 2:</label>
+      <input type="text" id="field2" name="field2" />
+      <div class="navigation-buttons">
+        <button type="button" onclick="previousStep('step2', 'step1')">
+          Previous
+        </button>
+        <button type="button" onclick="nextStep('step2', 'step3')">
+          Next
+        </button>
+      </div>
+    </form>
+
+    <!-- Step 3 -->
+    <form id="step3" class="form-step">
+      <h2>Step 3</h2>
+      <label for="field3">Field 3:</label>
+      <input type="text" id="field3" name="field3" />
+      <div class="navigation-buttons">
+        <button type="button" onclick="previousStep('step3', 'step2')">
+          Previous
+        </button>
+        <button type="button" onclick="nextStep('step3', 'step4')">
+          Next
+        </button>
+      </div>
+    </form>
+
+    <!-- Step 4 -->
+    <form id="step4" class="form-step">
+      <h2>Step 4</h2>
+      <label for="field4">Field 4:</label>
+      <input type="text" id="field4" name="field4" />
+      <div class="navigation-buttons">
+        <button type="button" onclick="previousStep('step4', 'step3')">
+          Previous
+        </button>
+        <button type="button" onclick="nextStep('step4', 'step5')">
+          Next
+        </button>
+      </div>
+    </form>
+
+    <!-- Step 5 -->
+    <form id="step5" class="form-step">
+      <h2>Step 5 - Funding Document Checklist</h2>
+      <div class="info">
+        <p>
+          FinQuest Pro Ltd. – 1000 Innovation Drive, Suite 500, Ottawa, ON K2K
+          3E7 T: 1-877-390-3864 F: 613-690-4948
+        </p>
+      </div>
+
+      <!-- <label for="field5">Field 5:</label>
+      <input type="text" id="field5" name="field5" /> -->
+
+      <!-- Reference Number and Customer Name -->
+      <div class="inputLayout">
+        <div class="fields">
+          <label for="referenceNumber">Reference Number:</label>
+          <input type="text" id="referenceNumber" name="referenceNumber" class="form-input" value="" />
+        </div>
+        <div class="fields">
+          <label for="customerName">Customer Name:</label>
+          <input type="text" id="customerName" name="customerName" class="form-input" value="" />
+        </div>
+      </div>
+
+      <!-- Funding Document Checklist -->
+      <div class="checklist">
+        <div>
+          <label>
+            <input type="checkbox" name="fullName" id="fullName" class="form-checkbox" value="" />
+            Full legal name, including all given names, required for all
+            applicants. For Ontario residents only, full legal name, including
+            middle initial, required for all applicants. All applicants to
+            sign
+          </label>
+        </div>
+
+        <div>
+          <label>
+            <input type="checkbox" name="physicalAddress" id="physicalAddress" class="form-checkbox" value="" />
+            Physical Address / Legal Land Description is required if mailing
+            address is a P.O. Box number
+          </label>
+        </div>
+
+        <div>
+          <label>
+            <input type="checkbox" name="employmentDetails" id="employmentDetails" class="form-checkbox" value="" />
+            Full employment details including employer name, full address and
+            specific occupation for all applicants
+          </label>
+        </div>
+
+        <div>
+          <label>
+            <input type="checkbox" name="employmentDetails" id="employmentDetails" class="form-checkbox" value="" />
+            Signed FinQuest Pro Ltd. Credit Application
+          </label>
+        </div>
+
+        <div>
+          <label>
+            <input type="checkbox" name="employmentDetails" id="employmentDetails" class="form-checkbox" value="" />
+            Signed Conditional Sale Contract (CSC);
+          </label>
+        </div>
+
+        <div>
+          <label>
+            <input type="checkbox" name="employmentDetails" id="employmentDetails" class="form-checkbox" value="" />
+            A void cheque, completed Preauthorized Payment Form, or completed
+            PAD section of the contract.
+          </label>
+        </div>
+
+        <div>
+          <label>
+            <input type="checkbox" name="employmentDetails" id="employmentDetails" class="form-checkbox" value="" />
+            Final Bill of Sale signed by Applicant(s) and Dealer
+          </label>
+        </div>
+
+        <div>
+          <label>
+            <input type="checkbox" name="clientIdentification" id="clientIdentification" class="form-checkbox"
+              value="" />
+            Completed Client Identification Disclosure Form. A valid Driver’s
+            Licence for Applicant or Co-applicant is mandatory for all
+            Non-Prime deals
+          </label>
+        </div>
+
+        <div>
+          <label>
+            <input type="checkbox" name="factoryInvoice" id="factoryInvoice" class="form-checkbox" value="" />
+            Copy of Factory Invoice for Dealer entered MSRP (applicable to new
+            vehicles only)
+          </label>
+        </div>
+
+        <div>
+          <label>
+            <input type="checkbox" name="vehicleRegistration" id="vehicleRegistration" class="form-checkbox" value="" />
+            The vehicle must be registered in the Applicant's/Co-Applicant's
+            personal name(s) (copy of registration not required)
+          </label>
+        </div>
+
+        <div>
+          <label>
+            <input type="checkbox" name="insuranceWarranty" id="insuranceWarranty" class="form-checkbox" value="" />
+            Life, Accident & Health, Disability Insurances and Warranty
+            documents showing FinQuest Pro Ltd. as a lien holder (if
+            applicable)
+          </label>
+        </div>
+
+        <div class="info">
+          <p>
+            This checklist is to be used as a guide only. Please refer to the
+            approval notification for any additional requirements. To ensure
+            quick funding, please fax complete packages only with all noted
+            requirements. Please note that FinQuest Pro Ltd. funds by fax and
+            we do not require original copies.
+          </p>
+        </div>
+      </div>
+      <div class="navigation-buttons">
+        <button type="button" onclick="previousStep('step5', 'step4')">
+          Previous
+        </button>
+        <button type="button" onclick="nextStep('step5', 'step6')">
+          Next
+        </button>
+      </div>
+    </form>
+
+    <!-- Step 6 -->
+    <form id="step6" class="form-step">
+      <h2>Step 6</h2>
+      <!-- <label for="field6">Field 6:</label>
+        <input type="text" id="field6" name="field6" /> -->
+
+      <!-- Attention and Fax Information -->
+      <div class="info">
+        <p>
+          <strong>ATTENTION: CUSTOMER SERVICE DEPARTMENT</strong><br />
+          Please fax all payout requests to: 613-690-4948<br />
+          For inquiries by phone, please call: 1-877-390-3864
+        </p>
+      </div>
+
+      <!-- Date -->
+      <label for="date">Date:</label>
+      <input type="text" id="date" name="date" placeholder="MM/DD/YYYY" class="form-input" value="" />
+
+      <!-- Dealership Information -->
+      <div class="dealership-info-container addborder">
+        <h3>Dealership Information</h3>
+        <div class="dealership-info">
+          <div class="fields">
+            <label for="dealershipName">Dealership Name:</label>
+            <input type="text" id="dealershipName" name="dealershipName" class="form-input" value="" />
+          </div>
+
+          <div class="fields">
+            <label for="contactName">Contact Name:</label>
+            <input type="text" id="contactName" name="contactName" class="form-input" value="" />
+          </div>
+
+          <div class="fields">
+            <label for="faxNumber">Fax Number:</label>
+            <input type="tel" id="faxNumber" name="faxNumber" class="form-input" value="" />
+          </div>
+
+          <div class="fields">
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" class="form-input" value="" />
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Customer Information -->
+      <div class="addborder">
+        <h3>Customer Information</h3>
+        <div class="fields">
+          <label for="customerName">Customer Name:</label>
+          <input type="text" id="customerName" name="customerName" class="form-input" value="" />
+        </div>
+
+        <div class="fields">
+          <label for="customerPhoneNumber">Phone Number:</label>
+          <input type="tel" id="customerPhoneNumber" name="customerPhoneNumber" class="form-input" value="" />
+        </div>
+
+        <div class="fields">
+          <label for="customerAddress">Full Address:</label>
+          <textarea id="customerAddress" name="customerAddress" class="form-input"></textarea>
+        </div>
+
+        <div class="fields">
+          <label for="loanNumber">Loan Number:</label>
+          <input type="text" id="loanNumber" name="loanNumber" class="form-input" value="" />
+        </div>
+      </div>
+
+      <!-- Vehicle Information -->
+      <div class="addborder">
+        <h3>Vehicle Information</h3>
+        <div class="fields">
+          <label for="vehicleYear">Year:</label>
+          <input type="text" id="vehicleYear" name="vehicleYear" class="form-input" value="" />
+        </div>
+
+        <div class="fields">
+          <label for="vehicleMake">Make:</label>
+          <input type="text" id="vehicleMake" name="vehicleMake" class="form-input" value="" />
+        </div>
+
+        <div class="fields">
+          <label for="vehicleModel">Model:</label>
+          <input type="text" id="vehicleModel" name="vehicleModel" class="form-input" value="" />
+        </div>
+
+        <div class="fields">
+          <label for="vinNumber">VIN #:</label>
+          <input type="text" id="vinNumber" name="vinNumber" class="form-input" value="" />
+        </div>
+      </div>
+
+      <!-- Authorization -->
+      <div class="addborder">
+        <h3>Authorization</h3>
+        <div class="fields">
+          <label for="customerSignature">Customer Signature:</label>
+          <input type="text" id="customerSignature" name="customerSignature" class="form-input" value="" />
+        </div>
+
+        <p>
+          <label for="authorizationCheckbox">
+            <input type="checkbox" id="authorizationCheckbox" name="authorizationCheckbox" class="form-checkbox"
+              value="" />
+            I authorize the release of loan payout information to the above
+            noted dealership
+          </label>
+        </p>
+      </div>
+      <div class="navigation-buttons">
+        <button type="button" onclick="previousStep('step6', 'step5')">
+          Previous
+        </button>
+        <button type="button" onclick="nextStep('step6', 'step7')">
+          Next
+        </button>
+      </div>
+    </form>
+
+    <!-- Step 7 -->
+    <form id="step7" class="form-step">
+      <h2>Step 7</h2>
+      <label for="field7">Field 7:</label>
+      <input type="text" id="field7" name="field7" />
+      <div class="navigation-buttons">
+        <button type="button" onclick="previousStep('step7', 'step6')">
+          Previous
+        </button>
+        <button type="button" onclick="nextStep('step7', 'step8')">
+          Next
+        </button>
+      </div>
+    </form>
+
+    <!-- Step 8 -->
+    <form id="step8" class="form-step">
+      <h2>Step 8</h2>
+      <label for="field8">Field 8:</label>
+      <input type="text" id="field8" name="field8" />
+      <div class="navigation-buttons">
+        <button type="button" onclick="previousStep('step8', 'step7')">
+          Previous
+        </button>
+        <button type="button" onclick="nextStep('step8', 'step9')">
+          Next
+        </button>
+      </div>
+    </form>
+
+    <!-- Step 9 -->
+    <form id="step9" class="form-step">
+      <h2>Step 9-Personal Reference Form</h2>
+
+      <!-- Applicant Name -->
+      <div class="inputLayout">
+        <div class="fields">
+          <label for="applicantName">Applicant Name:</label>
+          <input type="text" id="applicantName" name="applicantName" value="" />
+        </div>
+
+        <div class="fields">
+          <!-- Reference Number -->
+          <label for="referenceNumber">Reference #:</label>
+          <input type="text" id="referenceNumber" name="referenceNumber" value="" />
+        </div>
+      </div>
+
+      <!-- Reference Sections -->
+      <div class="reference-section">
+        <h4>Reference #1</h4>
+        <div class="reference-number">
+          <div class="fields">
+            <label for="ref1Name">Name:</label>
+            <input type="text" id="ref1Name" name="ref1Name" class="reference-name" value="" />
+          </div>
+
+          <div class="fields">
+            <label for="ref1Address">Address:</label>
+            <input type="text" id="ref1Address" name="ref1Address" class="reference-address" value="" />
+          </div>
+
+          <div class="fields">
+            <label for="ref1Phone">Phone:</label>
+            <input type="tel" id="ref1Phone" name="ref1Phone" class="reference-phone" value="" />
+          </div>
+
+          <div class="fields">
+            <label for="ref1Relation">Relation:</label>
+            <input type="text" id="ref1Relation" name="ref1Relation" class="reference-relation" value="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Reference #2 -->
+      <div class="reference-section">
+        <h4>Reference #2</h4>
+        <div class="reference-number">
+          <div class="fields">
+            <label for="ref2Name">Name:</label>
+            <input type="text" id="ref2Name" name="ref2Name" class="reference-name" value="" />
+          </div>
+
+          <div class="fields">
+            <label for="ref2Address">Address:</label>
+            <input type="text" id="ref2Address" name="ref2Address" class="reference-address" value="" />
+          </div>
+
+          <div class="fields">
+            <label for="ref2Phone">Phone:</label>
+            <input type="tel" id="ref2Phone" name="ref2Phone" class="reference-phone" value="" />
+          </div>
+
+          <div class="fields">
+            <label for="ref2Relation">Relation:</label>
+            <input type="text" id="ref2Relation" name="ref2Relation" class="reference-relation" value="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Reference #3 -->
+      <div class="reference-section">
+        <h4>Reference #3</h4>
+        <div class="reference-number">
+          <div class="fields">
+            <label for="ref3Name">Name:</label>
+            <input type="text" id="ref3Name" name="ref3Name" class="reference-name" value="" />
+          </div>
+
+          <div class="fields">
+            <label for="ref3Address">Address:</label>
+            <input type="text" id="ref3Address" name="ref3Address" class="reference-address" value="" />
+          </div>
+
+          <div class="fields">
+            <label for="ref3Phone">Phone:</label>
+            <input type="tel" id="ref3Phone" name="ref3Phone" class="reference-phone" value="" />
+          </div>
+
+          <div class="fields">
+            <label for="ref3Relation">Relation:</label>
+            <input type="text" id="ref3Relation" name="ref3Relation" class="reference-relation" value="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Reference #4 -->
+      <div class="reference-section">
+        <h4>Reference #4</h4>
+        <div class="reference-number">
+          <div class="fields">
+            <label for="ref4Name">Name:</label>
+            <input type="text" id="ref4Name" name="ref4Name" class="reference-name" value="" />
+          </div>
+
+          <div class="fields">
+            <label for="ref4Address">Address:</label>
+            <input type="text" id="ref4Address" name="ref4Address" class="reference-address" value="" />
+          </div>
+
+          <div class="fields">
+            <label for="ref4Phone">Phone:</label>
+            <input type="tel" id="ref4Phone" name="ref4Phone" class="reference-phone" value="" />
+          </div>
+
+          <div class="fields">
+            <label for="ref4Relation">Relation:</label>
+            <input type="text" id="ref4Relation" name="ref4Relation" class="reference-relation" value="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Reference #5 -->
+      <div class="reference-section">
+        <h4>Reference #5</h4>
+        <div class="reference-number">
+          <div class="fields">
+            <label for="ref5Name">Name:</label>
+            <input type="text" id="ref5Name" name="ref5Name" class="reference-name" value="" />
+          </div>
+
+          <div class="fields">
+            <label for="ref5Address">Address:</label>
+            <input type="text" id="ref5Address" name="ref5Address" class="reference-address" value="" />
+          </div>
+
+          <div class="fields">
+            <label for="ref5Phone">Phone:</label>
+            <input type="tel" id="ref5Phone" name="ref5Phone" class="reference-phone" value="" />
+          </div>
+
+          <div class="fields">
+            <label for="ref5Relation">Relation:</label>
+            <input type="text" id="ref5Relation" name="ref5Relation" class="reference-relation" value="" />
+          </div>
+        </div>
+      </div>
+      <!-- Reference Sections ends here-->
+
+      <div class="navigation-buttons">
+        <button type="button" onclick="previousStep('step9', 'step8')">
+          Previous
+        </button>
+        <button type="button" onclick="nextStep('step9', 'step10')">
+          Next
+        </button>
+      </div>
+    </form>
+
+    <!-- Step 10 -->
+    <form id="step10" class="form-step">
+      <h2>Step 10</h2>
+      <label for="field10">Field 10:</label>
+      <input type="text" id="field10" name="field10" />
+      <div class="navigation-buttons">
+        <button type="button" onclick="previousStep('step10', 'step9')">
+          Previous
+        </button>
+        <button type="button" onclick="nextStep('step10', 'step11')">
+          Next
+        </button>
+      </div>
+    </form>
+
+    <!-- Step 11 -->
+    <form id="step11" class="form-step">
+      <h2>Step 11</h2>
+      <label for="field11">Field 11:</label>
+      <input type="text" id="field11" name="field11" />
+      <div class="navigation-buttons">
+        <button type="button" onclick="previousStep('step11', 'step10')">
+          Previous
+        </button>
+        <button type="button" onclick="nextStep('step11', 'step12')">
+          Next
+        </button>
+      </div>
+    </form>
+
+    <!-- Step 12 -->
+    <form id="step12" class="form-step">
+      <h2>Step 12</h2>
+      <label for="field12">Field 12:</label>
+      <input type="text" id="field12" name="field12" />
+      <div class="navigation-buttons">
+        <button type="button" onclick="previousStep('step12', 'step11')">
+          Previous
+        </button>
+        <button type="button" onclick="nextStep('step12', 'step13')">
+          Next
+        </button>
+      </div>
+    </form>
+
+    <!-- Step 13 -->
+    <form id="step13" class="form-step">
+      <h2>Step 13</h2>
+      <label for="field13">Field 13:</label>
+      <input type="text" id="field13" name="field13" />
+      <div class="navigation-buttons">
+        <button type="button" onclick="previousStep('step13', 'step12')">
+          Previous
+        </button>
+        <button type="button" onclick="nextStep('step13', 'step14')">
+          Next
+        </button>
+      </div>
+    </form>
+
+    <!-- Step 14 -->
+    <form id="step14" class="form-step">
+      <h2>Step 14</h2>
+      <label for="field14">Field 14:</label>
+      <input type="text" id="field14" name="field14" />
+      <div class="navigation-buttons">
+        <button type="button" onclick="previousStep('step14', 'step13')">
+          Previous
+        </button>
+        <button type="button" onclick="submitForm('step14')">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function nextStep(currentStep, nextStep) {
+      $("#" + currentStep).removeClass("active");
+      $("#" + nextStep).addClass("active");
+      updateProgressBar(nextStep);
+    }
+
+    function previousStep(currentStep, previousStep) {
+      $("#" + currentStep).removeClass("active");
+      $("#" + previousStep).addClass("active");
+      updateProgressBar(previousStep);
+    }
+  </script>
+</body>
+
+</html>

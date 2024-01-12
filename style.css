@@ -1,0 +1,126 @@
+.form-container {
+  position: relative;
+  padding-top: 30px; /* Adjusted to accommodate the progress bar */
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.navigation-buttons button {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+/* my code */
+body {
+  font-family: Arial, sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#step9 label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#step9 input,
+#step9 select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+#step9 .reference-section {
+  border: 1px solid #ccc;
+  padding: 0 7px;
+  /* margin-bottom: 20px; */
+}
+
+#step9 .reference-section h4 {
+  margin-top: 5px;
+}
+#step9 .reference-number {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.inputLayout,
+.reference-number {
+  display: flex;
+  gap: 5px;
+}
+
+.reference-number {
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.fields {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#step5 .checklist {
+  padding-block: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+#step5 .checklist div {
+  padding-block: 6px;
+}
+
+#step5 p,
+#step5 .checklist {
+  line-height: 20px;
+  font-size: 15px;
+}
+#step5 .info,
+#step6 .info {
+  padding: 2px 1px;
+  border: 1px solid #535050;
+  margin: 10px 0;
+  background-color: #b99696;
+}
+
+.addborder{
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+
+#step6 input,
+#step6 select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.dealership-info{
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+

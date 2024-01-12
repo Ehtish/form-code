@@ -257,6 +257,29 @@ p,
   /* Color for checked checkbox label */
 }
 
+/* Global Radio Button Styles */
+.cs-radio {
+  margin-bottom: 10px;
+}
+
+/* Global Radio Button Options Styles */
+.cs-radio-options {
+  display: flex;
+  align-items: center;
+}
+
+/* Individual Radio Button Label Style */
+.cs-radio-options label {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+/* Styling for checked radio button label */
+.cs-radio-options input:checked + label {
+  color: #007bff;
+  /* Color for checked radio button label */
+}
+
 input#authorizationCheckbox {
   width: unset;
 }

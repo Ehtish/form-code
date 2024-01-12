@@ -573,9 +573,132 @@
 
     <!-- Step 10 -->
     <form id="step10" class="form-step">
-      <h2>Step 10</h2>
-      <label for="field10">Field 10:</label>
-      <input type="text" id="field10" name="field10" />
+      <h2>Step 10 - Insurance Declaration Form</h2>
+      <!-- <label for="field10">Field 10:</label>
+      <input type="text" id="field10" name="field10" /> -->
+
+
+      <!-- Company Information -->
+      <div class="company-info pd-10">
+        <p>FinQuest Pro Ltd. – 1000 Innovation Drive, Suite 500, Ottawa, ON K2K 3E7</p>
+        <p>T: 1-877-390-3864 F: 613-690-4948</p>
+      </div>
+
+      <div class="flex-cont cs-br">
+        <!-- Buyer's Information -->
+        <div class="flex-col-2 cs-br">
+          <div class="flex-col-2">
+            <label for="buyersFullName">Buyer's Full Legal Name:</label>
+            <input type="text" id="buyersFullName" name="buyersFullName" class="cs-input" value="" />
+          </div>
+          <div class="flex-col-2">
+            <label for="streetAddressBuyer">Street Address:</label>
+            <input type="text" id="streetAddressBuyer" name="streetAddressBuyer" class="cs-input" value="" />
+          </div>
+          <div class="flex-col-3">
+            <label for="cityBuyer">City:</label>
+            <input type="text" id="cityBuyer" name="cityBuyer" class="cs-input" value="" />
+          </div>
+          <div class="flex-col-3">
+            <label for="provinceBuyer">Province:</label>
+            <input type="text" id="provinceBuyer" name="provinceBuyer" class="cs-input" value="" />
+
+          </div>
+          <div class="flex-col-3">
+            <label for="postalCodeBuyer">Postal Code:</label>
+            <input type="text" id="postalCodeBuyer" name="postalCodeBuyer" class="cs-input" value="" />
+          </div>
+        </div>
+        <!-- Co-buyer's Information -->
+        <div class="flex-col-2 cs-br ">
+          <div class="flex-col-2">
+            <label for="coBuyersFullName">Co-buyer's Full Legal Name:</label>
+            <input type="text" id="coBuyersFullName" name="coBuyersFullName" class="cs-input" value="" />
+          </div>
+          <div class="flex-col-2">
+            <label for="coStreetAddressBuyer">Street Address:</label>
+            <input type="text" id="coStreetAddressBuyer" name="coStreetAddressBuyer" class="cs-input" value="" />
+          </div>
+          <div class="flex-col-2">
+            <label for="coCityBuyer">City:</label>
+            <input type="text" id="coCityBuyer" name="coCityBuyer" class="cs-input" value="" />
+          </div>
+          <div class="flex-col-2">
+            <label for="coProvinceBuyer">Province:</label>
+            <input type="text" id="coProvinceBuyer" name="coProvinceBuyer" class="cs-input" value="" />
+
+          </div>
+          <div class="flex-col-2">
+            <label for="coPostalCodeBuyer">Postal Code:</label>
+            <input type="text" id="coPostalCodeBuyer" name="coPostalCodeBuyer" class="cs-input" value="" />
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Vehicle Information -->
+      <div class="flex-cont cs-br">
+        <div class="flex-row cs-br w-100">
+          <div class="flex-col-3">
+            <label for="manufacturer">Manufacturer:</label>
+            <input type="text" id="manufacturer" name="manufacturer" class="cs-input" value="" />
+          </div>
+          <div class="flex-col-3">
+            <label for="year">Year:</label>
+            <input type="text" id="year" name="year" class="cs-input" value="" />
+          </div>
+          <div class="flex-col-3">
+            <label for="model">Model:</label>
+            <input type="text" id="model" name="model" class="cs-input" value="" />
+          </div>
+
+        </div>
+        <div class="flex-row cs-br w-100">
+          <div class="flex-col">
+            <label for="vinSerial">VIN/Serial#:</label>
+            <input type="text" id="vinSerial" name="vinSerial" class="cs-input" value="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Insurance Details -->
+      <div class="flex-cont cs-br">
+        <label for="insuranceBroker">INSURANCE BROKER/COMPANY NAME:</label>
+        <input type="text" id="insuranceBroker" name="insuranceBroker" class="cs-input" value="" />
+
+        <label for="policyNumber">Policy Number:</label>
+        <input type="text" id="policyNumber" name="policyNumber" class="cs-input" value="" />
+
+        <!-- Other insurance details go here -->
+
+        <p class="pd-10 w-100"><strong>
+            FINQUEST PRO LTD. 1000 INNOVATION DRIVE, SUITE 500, OTTAWA, ON K2K 3E7
+          </strong></p>
+        <!-- Is listed as lien holder with correct address -->
+        <div class="lien-holder pd-10 w-100">
+          <label>Is listed as lien holder with correct address:</label>
+          <div class="cs-radio-options pd-10">
+            <label>
+              <input type="radio" id="lienHolderYes" name="lienHolder" class="cs-radio" value="YES" />
+              YES
+            </label>
+            <label>
+              <input type="radio" id="lienHolderNo" name="lienHolder" class="cs-radio" value="NO" />
+              NO
+            </label>
+          </div>
+        </div>
+
+        <!-- Completed by and Signature -->
+        <label for="completedBy">Completed by (please print):</label>
+        <input type="text" id="completedBy" name="completedBy" class="cs-input" value="" />
+
+        <label for="signature">Signature:</label>
+        <input type="text" id="signature" name="signature" class="cs-input" value="" />
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" class="cs-input" value="" />
+      </div>
       <div class="navigation-buttons">
         <button type="button" onclick="previousStep('step10', 'step9')">
           Previous

@@ -16,6 +16,8 @@
       <h2>Step 1</h2>
       <label for="field1">Field 1:</label>
       <input type="text" id="field1" name="field1" />
+
+
       <div class="navigation-buttons">
         <button type="button" onclick="previousStep('step1', 'step1')">
           Previous
@@ -728,7 +730,7 @@
 
     <!-- Step 12 -->
     <form id="step12" class="form-step">
-      <h2>Step 12-FinQuest Pro Ltd. Payment Assurance System Customer Guide</h2>
+      <h2>Step 12-Payment Assurance System Customer Guide</h2>
       <!-- <label for="field12">Field 12:</label>
       <input type="text" id="field12" name="field12" /> -->
       <div class="flex-cont cs-br">
@@ -833,9 +835,116 @@
 
     <!-- Step 13 -->
     <form id="step13" class="form-step">
-      <h2>Step 13</h2>
+      <!-- <h2>Step 13</h2>
       <label for="field13">Field 13:</label>
-      <input type="text" id="field13" name="field13" />
+      <input type="text" id="field13" name="field13" /> -->
+
+      <h2>Step 13 - Letter of Authorization</h2>
+
+      <div class="flex-col cs-br">
+        <!-- Date -->
+        <label for="authorizationDate">Date:</label>
+        <input type="date" id="authorizationDate" name="authorizationDate" class="cs-input" value="" />
+
+        <!-- Full name of Registered Owner(s) -->
+        <label for="registeredOwnerName">Full name of Registered Owner(s):</label>
+        <input type="text" id="registeredOwnerName" name="registeredOwnerName" class="cs-input" value="" />
+
+        <!-- Address of Registered Owner(s) -->
+        <label for="registeredOwnerAddress">Address of Registered Owner(s):</label>
+        <input type="text" id="registeredOwnerAddress" name="registeredOwnerAddress" class="cs-input" value="" />
+
+        <!-- Owner(s) Full name of 3rd party -->
+        <label for="thirdPartyName">Owner(s) Full name of 3rd party:</label>
+        <input type="text" id="thirdPartyName" name="thirdPartyName" class="cs-input" value="" />
+      </div>
+      <!-- Authorization Transaction Options -->
+      <p class="cs-br">I/We <input type="text" id="authorizationBy" name="authorizationBy" class="cs-input" value="" />
+        hereby
+        authorize<input type="text" id="authorizedToPerform" name="authorizedToPerform" class="cs-input" value="" /> to
+        perform the following transaction:</p>
+
+      <div class="flex-colo cs-br">
+        <div class="flex-col">
+          <input type="checkbox" id="initialRegistration" name="transactionType" class="cs-checkbox" />
+          <label for="initialRegistration">Complete the <b> INITIAL</b> registration of the following vehicle into
+            my/our
+            name(s)</label>
+        </div>
+        <div class="flex-col">
+          <input type="checkbox" id="transferVehicle" name="transactionType" class="cs-checkbox" />
+          <label for="transferVehicle"><b> Transfer</b> the following vehicle into my/our name(s)</label>
+        </div>
+        <div class="flex-col">
+          <input type="checkbox" id="replaceRegistration" name="transactionType" class="cs-checkbox" />
+          <label for="replaceRegistration"><b> Replace</b> the vehicle and/or plate registration for the following
+            vehicle/plate</label>
+        </div>
+        <div class="flex-col">
+          <input type="checkbox" id="correctData" name="transactionType" class="cs-checkbox" />
+          <label for="correctData"><b> Correct</b> the incorrect data (<b>EXCEPT</b> address) on the following
+            vehicle/plate
+            registration</label>
+        </div>
+      </div>
+      <!-- Vehicle Information -->
+      <div class="flex-row cs-br">
+        <label for="vehicleIdentificationNumber">Vehicle Identification Number:</label>
+        <input type="text" id="vehicleIdentificationNumber" name="vehicleIdentificationNumber" class="cs-input"
+          value="" />
+      </div>
+      <div class="flex-row cs-br">
+
+        <div class="flex-col-3">
+          <label for="vehicleMake">Vehicle Make:</label>
+          <input type="text" id="vehicleMake" name="vehicleMake" class="cs-input" value="" />
+        </div>
+        <div class="flex-col-3">
+          <label for="vehicleModel">Vehicle Model:</label>
+          <input type="text" id="vehicleModel" name="vehicleModel" class="cs-input" value="" />
+        </div>
+        <div class="flex-col-3">
+          <label for="vehicleYear">Vehicle Year:</label>
+          <input type="text" id="vehicleYear" name="vehicleYear" class="cs-input" value="" />
+        </div>
+      </div>
+
+      <div class="flex-cont cs-br">
+        <label for="plateNumber">Plate number attached/to be attached:</label>
+        <input type="text" id="plateNumber" name="plateNumber" class="cs-input" value="" />
+
+        <label for="vehicleDescription">Description of Vehicle (colour, etc.):</label>
+        <input type="text" id="vehicleDescription" name="vehicleDescription" class="cs-input" value="" />
+      </div>
+
+
+      <!-- Signatures and Titles -->
+      <div class="flex-row cs-br">
+        <div class="flex-col-2">
+          <label for="ownerSignature">Signature of Registered Owner(s):</label>
+          <input type="text" id="ownerSignature" name="ownerSignature" class="cs-input" value="" />
+        </div>
+        <div class="flex-col-2">
+          <label for="title">Title of Individual granting authority (if Register Owner is a business):</label>
+          <input type="text" id="title" name="title" class="cs-input" value="" />
+        </div>
+      </div>
+      <div class="flex-row cs-br">
+        <div class="flex-col-2">
+          <label for="thirdPartySignature">Signature of 3rd Party:</label>
+          <input type="text" id="thirdPartySignature" name="thirdPartySignature" class="cs-input" value="" />
+        </div>
+
+        <div class="flex-col-2">
+          <label for="thirdPartyID">ID Provided by 3rd Party:</label>
+          <input type="text" id="thirdPartyID" name="thirdPartyID" class="cs-input" value="" />
+        </div>
+      </div>
+      <!-- Additional Notes -->
+      <p class="additional-notes cs-br">
+        <b>**letter must be on Company letterhead if Registered owner is a Company, using LEGAL company name, not
+          "operating as" name**</b>
+      </p>
       <div class="navigation-buttons">
         <button type="button" onclick="previousStep('step13', 'step12')">
           Previous

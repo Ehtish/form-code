@@ -302,6 +302,9 @@ input#authorizationCheckbox {
 .w-100{
   width: 100%;
 }
+.mr-2perc{
+  margin-right: 2%;
+}
 /* Media query for mobile responsiveness */
 @media (max-width: 768px) {
   .flex-col-2,

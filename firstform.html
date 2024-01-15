@@ -16,8 +16,6 @@
       <h2>Step 1</h2>
       <label for="field1">Field 1:</label>
       <input type="text" id="field1" name="field1" />
-
-
       <div class="navigation-buttons">
         <button type="button" onclick="previousStep('step1', 'step1')">
           Previous
@@ -957,9 +955,106 @@
 
     <!-- Step 14 -->
     <form id="step14" class="form-step">
-      <h2>Step 14</h2>
-      <label for="field14">Field 14:</label>
-      <input type="text" id="field14" name="field14" />
+      <h2>Step 14-Bill of Sale</h2>
+      <!-- <label for="field14">Field 14:</label>
+      <input type="text" id="field14" name="field14" /> -->
+
+      <!-- Bill of Sale -->
+      <div class="cs-br">
+        <p>This AGREEMENT dated the <input type="date" id="billOfSaleDate" name="billOfSaleDate" class="cs-input"
+            value="" /></p>
+        <p><b>BETWEEN</b></p>
+        <div class="flex-row cs-br">
+          <div class="flex-col">
+            <input type="text" id="prname_1" name="prname_1" class="cs-input" value="" />
+          </div>
+          <p class="pd-10 w-100"><b>-AND-</b></p>
+          <div class="flex-col pd-10">
+            <input type="text" id="prname_2" name="prname_2" class="cs-input" value="" />
+          </div>
+        </div>
+
+        <div class="cs-br">
+          <p class="pd-10">This document will serve as the legal bill of sale from the seller:</p>
+          <div class="flex-col-2">
+            <input type="text" id="sellerName" name="sellerName" class="cs-input" value="" />
+          </div>
+
+          <div class="flex-col-2">
+            <p class="pd-10">To the buyer:</p>
+            <input type="text" id="buyerName" name="buyerName" class="cs-input" value="" />
+          </div>
+        </div>
+
+        <div class="flex-cont cs-br">
+          <p class="pd-10 w-100"><b>The buyer agrees to purchase from the seller the following property:</b></p>
+          <div class="flex-row pd-10 w-100">
+            <div class="flex-col-4">
+              <label for="propertyYear">Year:</label>
+              <input type="text" id="propertyYear" name="propertyYear" class="cs-input" value="" />
+            </div>
+
+            <div class="flex-col-4">
+              <label for="propertyMake">Make:</label>
+              <input type="text" id="propertyMake" name="propertyMake" class="cs-input" value="" />
+            </div>
+
+            <div class="flex-col-4">
+              <label for="propertyModel">Model:</label>
+              <input type="text" id="propertyModel" name="propertyModel" class="cs-input" value="" />
+            </div>
+
+            <div class="flex-col-4">
+              <label for="propertyColour">Colour:</label>
+              <input type="text" id="propertyColour" name="propertyColour" class="cs-input" value="" />
+            </div>
+          </div>
+
+
+          <div class="flex-row w-100">
+            <div class="flex-col-2">
+              <label for="propertyVIN">V.I.N#:</label>
+              <input type="text" id="propertyVIN" name="propertyVIN" class="cs-input" value="" />
+            </div>
+
+            <div class="flex-col-2">
+              <label for="propertyMileage">Mileage:</label>
+              <input type="text" id="propertyMileage" name="propertyMileage" class="cs-input" value="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-cont cs-br">
+          <div class="flex-row w-100">
+            <!-- Consideration for Property -->
+            <p class="pd-10">In consideration for the property being sold, the buyer hereby agrees to pay:</p>
+            <textarea id="paymentAgreement" name="paymentAgreement" class="cs-textarea mr-2perc" rows="4"></textarea>
+
+
+            <div class="flex-col-2 w-100">
+              <label for="sellerSignature">Seller Signature:</label>
+              <input type="text" id="sellerSignature" name="sellerSignature" class="cs-input" value="" />
+            </div>
+
+            <div class="flex-col-2 w-100">
+              <label for="buyerSignature">Buyer Signature:</label>
+              <input type="text" id="buyerSignature" name="buyerSignature" class="cs-input" value="" />
+            </div>
+          </div>
+
+          <div class="flex-row w-100">
+            <div class="flex-col-2">
+              <label for="sellerFullName">Seller Name:</label>
+              <input type="text" id="sellerFullName" name="sellerFullName" class="cs-input" value="" />
+            </div>
+
+            <div class="flex-col-2">
+              <label for="buyerFullName">Buyer Name:</label>
+              <input type="text" id="buyerFullName" name="buyerFullName" class="cs-input" value="" />
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="navigation-buttons">
         <button type="button" onclick="previousStep('step14', 'step13')">
           Previous

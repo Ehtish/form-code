@@ -2,158 +2,190 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>my form</title>
 </head>
+<style>
+  /* Flex Container */
+  .flex-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Adjust as needed */
+
+  }
+
+  .cs-br {
+    border: 1px solid #ccc;
+    /* Border color and thickness */
+    padding: 20px;
+    /* Optional padding for better appearance */
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
+  }
+
+  /* Flex Row */
+  .flex-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* Flex Column with Equal Space */
+  .flex-col {
+    flex: 1;
+    box-sizing: border-box;
+    margin-right: 2%;
+    /* Adjust as needed */
+  }
+
+  /* Flex Column */
+  .flex-col-2 {
+    flex: 0 0 48%;
+    /* Adjust as needed */
+    box-sizing: border-box;
+    margin-right: 2%;
+    /* Adjust as needed */
+  }
+
+  .flex-col-3 {
+    flex: 0 0 31%;
+    /* Adjust as needed */
+    box-sizing: border-box;
+    margin-right: 2%;
+    /* Adjust as needed */
+  }
+
+  .flex-col-4 {
+    flex: 0 0 23%;
+    /* Adjust as needed */
+    box-sizing: border-box;
+    margin-right: 2%;
+    /* Adjust as needed */
+  }
+
+  /* Global Input Styles */
+  .cs-input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
+  /* Additional Input Styles */
+  .cs-input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  /* Additional Input Styles */
+  .cs-input:focus {
+    outline: none;
+    border-color: #000000;
+    box-shadow: 0 0 5px rgba(54, 53, 53, 0.5);
+  }
+
+
+
+  /* Global Label Styles */
+  .cs-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333333;
+    /* Label text color */
+  }
+
+  /* Global Textarea Styles */
+  .cs-textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    /* Default border color */
+    border-radius: 5px;
+  }
+
+  .cs-textarea:focus {
+    outline: none;
+    border-color: #000000;
+    /* Focus border color */
+    box-shadow: 0 0 5px rgba(54, 53, 53, 0.5);
+    /* Focus box shadow */
+  }
+
+  /* Global Checkbox Styles */
+  .cs-checkbox {
+    margin-bottom: 10px;
+  }
+
+  .cs-checkbox .cs-checkbox-label {
+    display: inline-block;
+    margin-left: 5px;
+    color: #333333;
+    /* Checkbox label text color */
+  }
+
+  /* Global Checklist Styles */
+  .cs-checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .cs-checklist-item {
+    margin-bottom: 10px;
+  }
+
+  /* Additional styling for checked checkboxes */
+  .cs-checklist-item .cs-checkbox:checked+.cs-checkbox-label {
+    color: #007bff;
+    /* Color for checked checkbox label */
+  }
+</style>
 
 <body>
-  <div class="form-container">
-    <!-- Step 1 -->
-    <form id="step1" class="form-step active">
-      <h2>Step 1</h2>
-      <label for="field1">Field 1:</label>
-      <input type="text" id="field1" name="field1" />
-      <div class="navigation-buttons">
-        <button type="button" onclick="previousStep('step1', 'step1')">
-          Previous
-        </button>
-        <button type="button" onclick="nextStep('step1', 'step2')">
-          Next
-        </button>
-      </div>
-    </form>
-
-    <!-- Step 13 -->
-    <form id="step13" class="form-step">
-      <!-- <h2>Step 13</h2>
-      <label for="field13">Field 13:</label>
-      <input type="text" id="field13" name="field13" /> -->
-
-      <h2>Step 13 - Letter of Authorization</h2>
-
-      <div class="flex-col cs-br">
-        <!-- Date -->
-        <label for="authorizationDate">Date:</label>
-        <input type="date" id="authorizationDate" name="authorizationDate" class="cs-input" value="" />
-
-        <!-- Full name of Registered Owner(s) -->
-        <label for="registeredOwnerName">Full name of Registered Owner(s):</label>
-        <input type="text" id="registeredOwnerName" name="registeredOwnerName" class="cs-input" value="" />
-
-        <!-- Address of Registered Owner(s) -->
-        <label for="registeredOwnerAddress">Address of Registered Owner(s):</label>
-        <input type="text" id="registeredOwnerAddress" name="registeredOwnerAddress" class="cs-input" value="" />
-
-        <!-- Owner(s) Full name of 3rd party -->
-        <label for="thirdPartyName">Owner(s) Full name of 3rd party:</label>
-        <input type="text" id="thirdPartyName" name="thirdPartyName" class="cs-input" value="" />
-      </div>
-      <!-- Authorization Transaction Options -->
-      <p>I/We hereby authorize to perform the following transaction:</p>
-
-      <div class="flex-cont cs-br">
-        <div class="flex-col">
-          <input type="checkbox" id="initialRegistration" name="transactionType" class="cs-checkbox" />
-          <label for="initialRegistration">Complete the INITIAL registration of the following vehicle into my/our
-            name(s)</label>
+  <!-- Step 8 -->
+  <form id="step8" class="form-step">
+    <h2>Step 8</h2>
+    <div class="flex-cont cs-br">
+      <div class="flex-row">
+        <div class="flex-col-2">
+          <label for="cs-label"> 8:</label>
+          <input type="text" id="8" name="8" class="cs-input" />
         </div>
-        <div class="flex-col">
-          <input type="checkbox" id="transferVehicle" name="transactionType" class="cs-checkbox" />
-          <label for="transferVehicle">Transfer the following vehicle into my/our name(s)</label>
-        </div>
-        <div class="flex-col">
-          <input type="checkbox" id="replaceRegistration" name="transactionType" class="cs-checkbox" />
-          <label for="replaceRegistration">Replace the vehicle and/or plate registration for the following
-            vehicle/plate</label>
-        </div>
-        <div class="flex-col">
-          <input type="checkbox" id="correctData" name="transactionType" class="cs-checkbox" />
-          <label for="correctData">Correct the incorrect data (EXCEPT address) on the following vehicle/plate
-            registration</label>
+        <div class="flex-col-2">
+          <label for="8"> 8:</label>
+          <input type="text" id="8" name="8" class="cs-input" />
         </div>
       </div>
-
-
-      <!-- Vehicle Information -->
-      <label for="vehicleIdentificationNumber">Vehicle Identification Number:</label>
-      <input type="text" id="vehicleIdentificationNumber" name="vehicleIdentificationNumber" class="cs-input"
-        value="" />
-
-      <label for="vehicleMake">Vehicle Make:</label>
-      <input type="text" id="vehicleMake" name="vehicleMake" class="cs-input" value="" />
-
-      <label for="vehicleModel">Vehicle Model:</label>
-      <input type="text" id="vehicleModel" name="vehicleModel" class="cs-input" value="" />
-
-      <label for="vehicleYear">Vehicle Year:</label>
-      <input type="text" id="vehicleYear" name="vehicleYear" class="cs-input" value="" />
-
-      <label for="plateNumber">Plate number attached/to be attached:</label>
-      <input type="text" id="plateNumber" name="plateNumber" class="cs-input" value="" />
-
-      <label for="vehicleDescription">Description of Vehicle (colour, etc.):</label>
-      <input type="text" id="vehicleDescription" name="vehicleDescription" class="cs-input" value="" />
-
-      <!-- Signatures and Titles -->
-      <label for="ownerSignature">Signature of Registered Owner(s):</label>
-      <input type="text" id="ownerSignature" name="ownerSignature" class="cs-input" value="" />
-
-      <label for="title">Title of Individual granting authority (if Register Owner is a business):</label>
-      <input type="text" id="title" name="title" class="cs-input" value="" />
-
-      <label for="thirdPartySignature">Signature of 3rd Party:</label>
-      <input type="text" id="thirdPartySignature" name="thirdPartySignature" class="cs-input" value="" />
-
-      <label for="thirdPartyID">ID Provided by 3rd Party:</label>
-      <input type="text" id="thirdPartyID" name="thirdPartyID" class="cs-input" value="" />
-
-      <!-- Additional Notes -->
-      <p class="additional-notes">
-        **letter must be on Company letterhead if Registered owner is a Company, using LEGAL company name, not
-        "operating as" name**
-      </p>
-      <div class="navigation-buttons">
-        <button type="button" onclick="previousStep('step2', 'step1')">
-          Previous
-        </button>
-        <button type="button" onclick="nextStep('step2', 'step3')">
-          Next
-        </button>
+    </div>
+    <div class="flex-cont cs-br">
+      <div class="flex-col">
+        <div class="cs-checklist-item">
+          <input type="checkbox" class="cs-checkbox" id="item1" />
+          <label class="cs-checkbox-label" for="item1">Item 1</label>
+        </div>
+        <div class="cs-checklist-item">
+          <input type="checkbox" class="cs-checkbox" id="item2" />
+          <label class="cs-checkbox-label" for="item2">Item 2</label>
+        </div>
+        <div class="cs-checklist-item">
+          <input type="checkbox" class="cs-checkbox" id="item3" />
+          <label class="cs-checkbox-label" for="item3">Item 3</label>
+        </div>
       </div>
-    </form>
+    </div>
 
-    <!-- Step 14 -->
-    <!-- <form id="step14" class="form-step">
-      <h2>Step 14</h2>
-      <label for="field14">Field 14:</label>
-      <input type="text" id="field14" name="field14" />
-      <div class="navigation-buttons">
-        <button type="button" onclick="previousStep('step3', 'step2')">
-          Previous
-        </button>
-        <button type="button" onclick="nextStep('step3', 'step4')">
-          Next
-        </button>
-      </div>
-    </form> -->
-  </div>
-
-  <script>
-    function nextStep(currentStep, nextStep) {
-      $("#" + currentStep).removeClass("active");
-      $("#" + nextStep).addClass("active");
-      updateProgressBar(nextStep);
-    }
-
-    function previousStep(currentStep, previousStep) {
-      $("#" + currentStep).removeClass("active");
-      $("#" + previousStep).addClass("active");
-      updateProgressBar(previousStep);
-    }
-  </script>
+    <div class="navigation-buttons">
+      <button type="button" onclick="previousStep('step8', 'step7')">
+        Previous
+      </button>
+      <button type="button" onclick="nextStep('step8', 'step9')">
+        Next
+      </button>
+    </div>
+  </form>
 </body>
 
 </html>

@@ -56,18 +56,47 @@
       </div>
     </form>
 
+    
     <!-- Step 4 -->
     <form id="step4" class="form-step">
-      <h2>Step 4</h2>
-      <label for="field4">Field 4:</label>
-      <input type="text" id="field4" name="field4" />
+        <h2 class="cs-br">Step 4 - Request for employment verification</h2>
+    
+        <p class="cs-br cs-label"><b>FinQuest Pro Ltd. – 1000 Innovation Drive, Suite 500, Ottawa, ON K2K 3E7
+                T: 1-877-390-3864 F: 613-690-4948</b></p>
+    
+        <p class="cs-br cs-label">The applicant, having submitted a request for financing to FinQuest Pro Ltd. hereby requests confirmation of his/her employment information. In accordance with Personal Information Protection and Electronic Documents Act (PIPEDA) or, where applicable, the privacy legislation governing the applicant's province, FinQuest Pro Ltd. requires an applicant's written consent in order to request personal information from an employer or any other organization that collects personal information.<br><br> FinQuest Pro Ltd. requires this in order to verify the applicant's employment information. With the applicant's consent, as indicated by the applicant's signature below, we hereby request the confirmation of the applicant's employment particulars. We further acknowledge that this authorization is exclusive for this purpose only and can be withdrawn at any time by the applicant in writing.</p>
+        <div class="flex-container cs-br">
+          <label for="applicant" class="cs-label">Applicant:</label>
+          <input type="text" id="applicant" name="applicant" class="cs-textarea" />
+      
+          <label for="employerRequest" class="cs-label">does hereby request (Employer): </label>
+          <input type="text" id="employerRequest" name="employerRequest" class="cs-textarea" />
+      
+          <label for="confirmInformation" class="cs-label"> to confirm all information that FinQuest Pro Ltd. may require. </label>
+      </div>
+    
+        <p class="cs-br">Note to Employer: The applicant's employment confirmation can be sent directly to FinQuest Pro Ltd. by fax to:<br>
+            <b> Attention: Funding Department<br>
+            Fax: 613-690-4948</b></p>
+    
+        <p class="cs-br">The applicant further authorizes a representative of FinQuest Pro Ltd. to contact his/her employer directly by telephone in order to confirm the information that was provided in the applicant's credit application submitted to OUR FinQuest Pro Ltd.</p>
+      <div class="flex-cont cs-br">
+        <div class="flex-col-2">
+          <label for="applicantSignature">Applicant Signature</label>
+          <input type="text" id="applicantSignature" name="applicantSignature" class="cs-input" value="">
+        </div>
+        <div class="flex-col-2">
+          <label for="FinQuest">FinQuest Pro Ltd. Reference #</label>
+          <input type="text" id="FinQuest" name="FinQuest" class="cs-input" value="">
+        </div>
+      </div>
       <div class="navigation-buttons">
-        <button type="button" onclick="previousStep('step4', 'step3')">
-          Previous
-        </button>
-        <button type="button" onclick="nextStep('step4', 'step5')">
-          Next
-        </button>
+            <button type="button" onclick="previousStep('step4', 'step3')" class="cs-button">
+                Previous
+            </button>
+            <button type="button" onclick="nextStep('step4', 'step5')" class="cs-button">
+                Next
+            </button>
       </div>
     </form>
 
@@ -306,7 +335,7 @@
       </div>
 
       <!-- Authorzation -->
-      <div class="flex-cont cs-br">
+      <div class="flex-cont cs-br" style="    align-items: center;">
         <div class="flex-col">
           <label for="customerSignature">Customer Signature:</label>
           <input type="text" id="customerSignature" name="customerSignature" class="cs-input" value="" />
@@ -399,6 +428,135 @@
 
     <!-- Step 8 -->
     <form id="step8" class="form-step">
+          <h2>Step 8 - Trustee Authorization Form</h2>
+      
+          <p class="cs-br">FinQuest Pro Ltd. – 1000 Innovation Drive, Suite 500, Ottawa, ON K2K 3E7 T:1-877-390-3864 F: 613-690-4948</p>
+      
+          <p class="cs-br">The information contained in this transmission is confidential and intended only for the party to whom it is addressed. If you receive this transmission in error, please call the number above.</p>
+      
+          <p class="cs-br">Applicant: Please complete this portion and fax it to your Trustee or Credit Counselor</p>
+        <div class="flex-container cs-br">
+            <label for="i" class="cs-label">I:</label>
+            <input type="text" id="i" name="i" class="cs-textarea">
+        
+            <label for="applicantnamepleaseprint" class="cs-label"> (applicant name: please print) hereby authorize</label>
+            <input type="text" id="applicantnamepleaseprint" name="applicantnamepleaseprint" class="cs-textarea">
+        
+            <label for="trusteeorcounselorname" class="cs-label">(Trustee or counselor name) to release any of my personal information, including payment history, to TD Auto Finance for the purposes of financing a motor vehicle.
+               Thank you in advance for your cooperation.</label>
+        </div>
+        <div class="flex-cont cs-br">
+          <div class="flex-row cs-br w-100">
+            <div class="flex-col-3">
+              <label for="ApplicantSignature">Applicant Signature:</label>
+              <input type="text" id="ApplicantSignature" name="ApplicantSignature" class="cs-input" value="">
+            </div>
+            <div class="flex-col-3">
+              <label for="date">Date:</label>
+              <input type="date" id="date" name="date" class="cs-input" value="">
+            </div>
+            <div class="flex-col-3">
+              <label for="finQuest">FinQuest Pro Ltd. Reference #</label>
+              <input type="text" id="finQuest" name="finQuest" class="cs-input" value="">
+            </div>
+  
+          </div>
+          <div class="flex-row cs-br w-100">
+            <div class="flex-col-3">
+              <label for="trusteeoffice">Trustee Office Name & City:</label>
+              <input type="text" id="trusteeoffice" name="trusteeoffice" class="cs-input" value="">
+            </div>
+            <div class="flex-col-3">
+              <label for="number">Phone Number:</label>
+              <input type="number" id="number" name="number" class="cs-input" value="">
+            </div>
+            <div class="flex-col-3">
+              <label for="facnumber"> Fax Number:</label>
+              <input type="number" id="facnumber" name="facnumber" class="cs-input" value="">
+            </div>
+  
+          </div>
+        </div>
+        <p class="cs-br">Trustee or Counselor:  Please complete the following and fax to FinQuest Pro Ltd. At 613-690-4948 or call us at 1-877-390-3864</p>
+        <div class="flex-cont cs-br">
+          <label for="thedatethatthebankruptcy">The date that the bankruptcy, proposal, or credit counseling was filed:</label>
+          <input type="text" id="thedatethatthebankruptcy" name="thedatethatthebankruptcy" class="cs-input" value="">
+        </div>
+        <div class="flex-cont cs-br">
+          <label for="totalliability">Total liability or starting balance $:</label>
+          <input type="text" id="totalliability" name="totalliability" class="cs-input" value="">
+        </div>
+        <div class="flex-cont cs-br">
+          <label for="thedatethattheprogramwas">The date that the program was (or will be) completed: </label>
+          <input type="date" id="thedatethattheprogramwas" name="thedatethattheprogramwas" class="cs-input" value="">
+        </div>
+        <div class="flex-container cs-br">
+            <label for="hastheclients" class="cs-label">Has the client(s) been bankrupt before?</label>
+            <input type="text" id="hastheclients" name="hastheclients" class="cs-textarea"> 
+        
+            <label for="ifyeswhen" class="cs-label">If yes, when?</label>
+            <input type="text" id="ifyeswhen" name="ifyeswhen" class="cs-textarea">
+        </div>
+        <div class="flex-container cs-br">
+          <label for="howmanypayments" class="cs-label">How many payments have been made to date: </label>
+          <input type="date" id="howmanypayments" name="howmanypayments" class="cs-textarea"> 
+      
+          <label for="monthlypaymentamount" class="cs-label">Monthly payment amount $:</label>
+          <input type="number" id="monthlypaymentamount" name="monthlypaymentamount" class="cs-textarea">
+        </div>
+        <div class="flex-cont cs-br">
+          <label for="jointfiling">If it's a joint filing, does the monthly payment pertain to each or is it a total for both?  </label>
+          <input type="text" id="jointfiling" name="jointfiling" class="cs-input" value="">
+        </div>
+        <div class="flex-cont cs-br">
+          <label for="specifyanyproblems">Specify any problems with payments (late payments, NSF's or missed payments): </label>
+          <input type="text" id="specifyanyproblems" name="specifyanyproblems" class="cs-input" value="">
+        </div>
+        <div class="flex-cont cs-br">
+          <label for="haveanymissedpayments">Have any missed payments been brought up-to-date, or arrangements been made? </label>
+          <input type="text" id="haveanymissedpayments" name="haveanymissedpayments" class="cs-input" value="">
+        </div>
+        <div class="flex-cont cs-br">
+          <label for="ifthebankruptcy">If the bankruptcy was longer than 9 months, please state the reason (fees, paperwork, surplus income, surplus assets, counseling sessions, second bankruptcy, etc.) and the type of discharge they received: </label>
+          <input type="text" id="ifthebankruptcy" name="ifthebankruptcy" class="cs-input" value="">
+        </div>
+        <div class="flex-cont cs-br">
+          <label for="whichsecuredcreditors">Which secured creditors are the client(s) continuing to pay to outside of the program and what are they secured on? </label>
+          <input type="text" id="whichsecuredcreditors" name="whichsecuredcreditors" class="cs-input" value="">
+        </div>
+        <div class="flex-container cs-br">
+          <label for="forcreditcounseling" class="cs-label">For Credit Counseling and OPD only: Can the client(s) incur further debt for a vehicle? </label>
+          <input type="text" id="forcreditcounseling" name="forcreditcounseling" class="cs-textarea"> 
+      
+          <label for="whichcreditorswereexcluded" class="cs-label">Which creditors were excluded from the program? </label>
+          <input type="text" id="whichcreditorswereexcluded" name="whichcreditorswereexcluded" class="cs-textarea">
+        </div>
+        <div class="flex-cont cs-br">
+          <label for="pleaseprint">Completed by (please print):</label>
+          <input type="text" id="pleaseprint" name="pleaseprint" class="cs-input" value="">
+        </div>
+        <div class="flex-cont cs-br">
+          <div class="flex-row cs-br w-100">
+            <div class="flex-col-3">
+              <label for="signature">Signature</label>
+              <input type="text" id="signature" name="signature" class="cs-input" value="">
+            </div>
+            <div class="flex-col-3">
+              <label for="date">Date:</label>
+              <input type="date" id="date" name="date" class="cs-input" value="">
+            </div>
+          </div>
+        </div>
+        <div class="navigation-buttons">
+            <button type="button" onclick="previousStep('step8', 'step7')" class="cs-button">
+                Previous
+            </button>
+            <button type="button" onclick="nextStep('step8', 'step9')" class="cs-button">
+                Next
+            </button>
+        </div>
+    </form>
+    <!-- <form id="step8" class="form-step">
       <h2>Step 8</h2>
       <label for="field8">Field 8:</label>
       <input type="text" id="field8" name="field8" />
@@ -410,7 +568,7 @@
           Next
         </button>
       </div>
-    </form>
+    </form> -->
 
     <!-- Step 9 -->
     <form id="step9" class="form-step">
@@ -712,10 +870,95 @@
     </form>
 
     <!-- Step 11 -->
+    
     <form id="step11" class="form-step">
-      <h2>Step 11</h2>
-      <label for="field11">Field 11:</label>
-      <input type="text" id="field11" name="field11" />
+      <h2>Step 11 - Dealer Agreement</h2>
+      <p class="cs-br"><b>FinQuest Pro Ltd. – 1000 Innovation Drive, Suite 500, Ottawa, ON  K2K 3E7   T: 1-877-390-3864  F: 613-690-4948 </b></p>
+      <div class="flex-cont cs-br">
+          <label for="thisagreementdatedthe">This AGREEMENT dated the </label>
+          <input type="date" id="thisagreementdatedthe" name="thisagreementdatedthe" class="cs-input" value="">
+      </div>
+      <p class="cs-br">BETWEEN</p>
+      <p class="cs-br"><b>FinQuest Pro Ltd.</b> a corporation incorporated pursuant to the laws of Ontario whose business address is 1000 Innovation Drive, Suite 500, Ottawa ON  K2K 3E7 (“FinQuest Pro Ltd.”)<br> -and-</p>
+      <div class="flex-container cs-br">
+        <label for="nameofdealership" class="cs-label">[NAME OF DEALERSHIP], a corporation incorporated pursuant to the laws of Ontario whose address is </label>
+        <input type="text" id="nameofdealership" name="nameofdealership" class="cs-textarea"> 
+        <label for="nameofdealership" class="cs-label">(the “Dealer”) </label>
+      </div>
+      <p class="cs-br">WHEREAS</p>
+      <p class="cs-br">A. The Dealer operates a used car dealership under the name of [Name of Dealership] at [Address of Dealership] (the “Dealership”) and sells used vehicles to individuals; </p>
+      <p class="cs-br">B. FinQuest Pro Ltd. is in the business of, inter alia, leasing used vehicles to individuals; </p>
+      <p class="cs-br">C. The Dealer would like FinQuest Pro Ltd. to provide vehicle leasing services to its customers (the “Customers”) and FinQuest Pro Ltd.  would like to provide said services to the Customers on the terms and conditions specified herein; </p>
+      <p class="cs-br">D. On approved Customers and vehicles, FinQuest Pro Ltd. will purchase the vehicle that the Customer wishes to lease from FinQuest Pro Ltd. from the Dealership. </p>
+      <p class="cs-br">NOW THEREFORE for good and valuable consideration including the payment of ONE DOLLAR ($1.00) by FinQuest Pro Ltd. to the Dealer, the receipt and sufficiency of which is hereby acknowledged, the parties agree as follows: </p>
+      <p class="cs-br"><b>1.	Leases </b> <br>The Dealership will provide notice (the “Notice”) to FinQuest Pro Ltd. when a Customer wishes to lease a vehicle (the “Vehicle”) from FinQuest Pro Ltd. that is owned by the Dealership. The Notice will contain information reasonably required by FinQuest Pro Ltd. from time to time in respect to the Customer and Vehicle which shall include but might not be limited to: <br>
+        a) the Customer’s name and contact information; <br>
+        b) the year, make, model, odometer reading and vehicle identification number of the Vehicle; and <br>
+        c) the purchase price of the Vehicle (the “Purchase Price”). (the “Information”) <br>
+        Following receipt of the Notice FinQuest Pro Ltd. will make reasonable efforts to have the Customer complete its standard intake forms for new lease customers and will undertake such due diligence inquiries in respect to the Customer and the Vehicle as FinQuest Pro Ltd. deems necessary in its sole and unfettered discretion (“Due Diligence”). <br>
+        If FinQuest Pro Ltd. satisfies its Due Diligence requirements in respect to the Customer and Vehicle it will make an offer (the “Lease Offer”) to the Customer to lease the Vehicle from FinQuest Pro Ltd. on such terms and conditions as FinQuest Pro Ltd. deems satisfactory in its sole and unfettered discretion. For greater clarity and certainty, FinQuest Pro Ltd. will not be under any obligation of any kind to make a Lease Offer to a Customer. <br>
+        If the Customer accepts the Lease Offer and enters into a binding lease agreement with FinQuest Pro Ltd. for the Vehicle (the “Lease”), the Dealer and FinQuest Pro Ltd. will be deemed to have entered into an agreement of purchase and sale in respect to the Vehicle for the Purchase Price with the Dealer being the seller and FinQuest Pro Ltd. being the purchaser (the “Purchase Transaction”). The Purchase Transaction will be completed on or before the date on which the term of the Lease will commence (the “Closing Date”) and the Vehicle will be transferred by the Dealer to FinQuest Pro Ltd. free and clear of all liens and encumbrances. <br>
+
+      </p>
+      <p class="cs-br"><b>2.	Risk of Loss <br>The risk of loss from any casualty to the Vehicle, regardless of the cause, will on the Dealer until the Vehicle has been received by either FinQuest Pro Ltd.  or the Customer. </b></p>
+      <p class="cs-br"><b>3.	Representations & Warranties</b> <br>The Dealer hereby represents and warrants to FinQuest Pro Ltd. that: <br>
+        a. To the best of the Dealer’s knowledge and belief, the Used Vehicle Information Package in respect to the Vehicle is and will be accurate as of the Closing Date; <br>
+        b. The Vehicle is and will be free of all liens and encumbrances as of the Closing Date; <br>
+        c. The Dealer has complied with all applicable laws, rules and regulations and prescribed requirements thereunder including but not limited to all requirements of the Ontario Motor Vehicle Industry Council (OMVIC) in respect to the Customer and the Vehicle; <br>
+        d. The Dealer has not made any false or misleading statements to the Customer and has not made any representations and warranties to the Customer in respect to the Vehicle or FinQuest Pro Ltd.  other than has been disclosed to FinQuest Pro Ltd. in writing and FinQuest Pro Ltd. has acknowledge in writing; and<br>
+        e. The Vehicle is fit for the intended purpose
+      </p>
+      <p class="cs-br"><b>4. Termination </b><br>
+        Either party may terminate this Agreement without cause by providing the other with thirty (30) days written advance notice to the other party. <br>
+        Either party may terminate this Agreement effective immediately for cause, without advance notice or payment in lieu of such notice. Without restricting the generality of the foregoing, “cause” includes a material breach of the provisions of this Agreement, where such breach is incapable of cure, or with respect to a material breach capable of cure, where the breaching party does not cure such breach within five (5) days after receipt of written notice of such breach. <br>
+        The termination of this Agreement will not relieve either Party of any obligation or liability prior to or subsequent to such termination. 
+      </p>
+      <p class="cs-br"><b>5.	Indemnification </b><br>
+        If any of the foregoing representations and warranties of the Dealer prove to be untrue in any material respect then (in addition to any other right or remedy available to FinQuest Pro Ltd.), the Dealer agrees, upon demand by FinQuest Pro Ltd., to accept the return of the Vehicle subject to reasonable wear and tear and to repay the Purchase Price plus the ten percent (10%) of the Purchase Price which additional amount represents a reasonable estimate of the costs and expenses incurred by FinQuest Pro Ltd. in respect to the matters contemplated hereunder. The Dealer further agrees to indemnify and hold harmless FinQuest Pro Ltd. for any other loss or damage suffered by FinQuest Pro Ltd. as a result of the breach of any such representations and warranties. 
+      </p>
+      <p class="cs-br"><b>6.	Confidentiality </b><br>
+        All confidential records, material and information and copies thereof, and all trade secrets (and without restricting the generality of the foregoing, including inventions, discoveries and methods of processing and production) concerning the business or affairs of the parties (collectively, "Proprietary Information") shall remain the exclusive property of the respective party. During the term of this Agreement and for an indefinite period thereafter, the parties and their directors, officers, employees, contractors or agents shall not divulge the contents of such Proprietary Information to any person, and the parties and their directors, officers, employees, contractors and agents shall not, at any time, use the contents of such Proprietary Information for any purpose whatsoever. <br>
+        For the purposes hereof, "confidential records, material and information" includes information known or used by parties in connection with their respective businesses, including but not limited to any formula, design, prototype, compilation of information, data, program, code, method, technique or process, information relating to any product, device, equipment or machine, information about or relating to a parties’ customers and the parties’ markets and marketing plans, present and future, information about or relating to the parties’ potential business ventures, financial information of all kinds relating to a party and its activities, all inventions, ideas, and related material, but does not include any of the foregoing which was known to the other party, as the case may be other than through the relationship of the parties or which is or becomes a matter of public knowledge. 
+      </p>
+      <p class="cs-br"><b>7.	Entire Agreement </b><br>
+        This agreement constitutes the entire Agreement between the parties with respect to all of the matters herein and its execution has not been induced by, nor do any of the parties rely upon or regard as material, any representations or writings whatever not incorporated herein and made a part hereof and may not be amended or modified in any respect except by written instrument signed by the parties hereto. The Schedules referred to herein are incorporated herein by reference and form part of the Agreement. 
+      </p>
+      <p class="cs-br"><b>8.	Counterparts </b><br>
+        This Agreement may be executed in several counterparts, each of which so executed shall be deemed to be an original and such counterparts together shall be but one and the same instrument. 
+      </p>
+      <p class="cs-br"><b>9.	Notices </b><br>
+        All notices, requests, demands or other communications (collectively, "Notices") by the terms hereof required or permitted to be given by one party to any other party, or to any other person shall be given in writing by personal delivery or by registered mail, postage prepaid, or by facsimile transmission to such other party at their last known address or at such other address as may be given by such person to the other parties hereto in writing from time to time. If any party bound hereby or any permitted Transferee of shares hereunder shall not have given the parties hereto Notice setting forth an address for the giving of Notices, the Notice for such person shall be deemed to have been properly given if given in accordance with the terms hereof as if given to the Transferor(s) of such shares. <br>
+        All such Notices shall be deemed to have been received when delivered or transmitted, or, if mailed, 48 hours after 12:01 a.m. on the day following the day of the mailing thereof. If any Notice shall have been mailed and if regular mail service shall be interrupted by strikes or other irregularities, such Notice shall be deemed to have been received 48 hours after 12:01 a.m. on the day following the resumption of normal mail service, provided that during the period that regular mail service shall be interrupted all Notices shall be given by personal delivery or by facsimile transmission. 
+      </p>
+      <p class="cs-br"><b>10.	Enurement </b><br>
+        This Agreement shall enure to the benefit of and be binding upon the parties and their respective heirs, executors, administrators, successors, legal representatives and permitted assigns. 
+      </p>
+      <p class="cs-br"><b>11.	Additional Documents </b><br>
+        The parties shall sign such further and other documents, cause such meetings to be held, resolutions passed and by-laws enacted, exercise their vote and influence, do and perform and cause to be done and performed such further and other acts and things as may be necessary or desirable in order to give full effect to this Agreement and the Loan Agreement and every part thereof. 
+      </p>
+      <p class="cs-br"><b>12.	Interpretation, Choice of Law and Venue </b><br>
+        This Assignment shall be interpreted under and governed by the laws of the Province of Ontario and the federal laws of Canada applicable therein. Headings are for convenience only and shall not be to in the interpretation of this Assignment. Any action or proceeding arising out of or based upon this Assignment may be instituted in the courts of the Province of Ontario in the City of Ottawa, and each party irrevocably submits to the exclusive jurisdiction of such courts in any such action or proceeding. <br>
+        <b>IN WITNESS WHEREOF</b>the parties have executed this Agreement at Ottawa on the date first written above. <br>
+        FinQuest Pro Ltd.
+      </p>
+      <div class="flex-container cs-br">
+        <label for="per" class="cs-label">Per: </label>
+        <input type="text" id="per" name="per" class="cs-textarea"> 
+    
+        <label for="monthlypaymentamount" class="cs-label">Neal Kohli <br>
+          I have authority to bind the corporation. <br>
+          [Name of Dealer] <br>
+          </label>
+      </div>
+      <div class="flex-container cs-br">
+        <label for="per" class="cs-label">Per: </label>
+        <input type="text" id="per" name="per" class="cs-textarea"> 
+        <label for="name" class="cs-label">Name: </label>
+        <input type="text" id="name" name="name" class="cs-textarea"> 
+        <label for="title" class="cs-label">Title: </label>
+        <input type="text" id="title" name="title" class="cs-textarea"> 
+        <label for="title" class="cs-label">I have authority to bind the corporation. </label>
+      </div>
       <div class="navigation-buttons">
         <button type="button" onclick="previousStep('step11', 'step10')">
           Previous
@@ -728,7 +971,7 @@
 
     <!-- Step 12 -->
     <form id="step12" class="form-step">
-      <h2>Step 12-Payment Assurance System Customer Guide</h2>
+      <h2>Step 12-FinQuest Pro Ltd. Payment Assurance System Customer Guide</h2>
       <!-- <label for="field12">Field 12:</label>
       <input type="text" id="field12" name="field12" /> -->
       <div class="flex-cont cs-br">
@@ -831,6 +1074,7 @@
       </div>
     </form>
 
+    <!-- Step 13 -->
     <!-- Step 13 -->
     <form id="step13" class="form-step">
       <!-- <h2>Step 13</h2>
@@ -952,7 +1196,21 @@
         </button>
       </div>
     </form>
+    <!-- <form id="step13" class="form-step">
+      <h2>Step 13</h2>
+      <label for="field13">Field 13:</label>
+      <input type="text" id="field13" name="field13" />
+      <div class="navigation-buttons">
+        <button type="button" onclick="previousStep('step13', 'step12')">
+          Previous
+        </button>
+        <button type="button" onclick="nextStep('step13', 'step14')">
+          Next
+        </button>
+      </div>
+    </form> -->
 
+    <!-- Step 14 -->
     <!-- Step 14 -->
     <form id="step14" class="form-step">
       <h2>Step 14-Bill of Sale</h2>
@@ -1062,7 +1320,18 @@
         <button type="button" onclick="submitForm('step14')">Submit</button>
       </div>
     </form>
-  </div>
+    <!-- <form id="step14" class="form-step">
+      <h2>Step 14</h2>
+      <label for="field14">Field 14:</label>
+      <input type="text" id="field14" name="field14" />
+      <div class="navigation-buttons">
+        <button type="button" onclick="previousStep('step14', 'step13')">
+          Previous
+        </button>
+        <button type="button" onclick="submitForm('step14')">Submit</button>
+      </div>
+    </form>
+  </div> -->
 
   <script>
     function nextStep(currentStep, nextStep) {

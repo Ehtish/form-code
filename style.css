@@ -33,51 +33,6 @@ form {
   margin: 0 auto;
 }
 
-#step9 label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-#step9 input,
-#step9 select {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-
-#step9 .reference-section {
-  border: 1px solid #ccc;
-  padding: 0 7px;
-  /* margin-bottom: 20px; */
-}
-
-#step9 .reference-section h4 {
-  margin-top: 5px;
-}
-#step9 .reference-number {
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.inputLayout,
-.reference-number {
-  display: flex;
-  gap: 5px;
-}
-
-.reference-number {
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.fields {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 #step5 .checklist {
   padding-block: 10px;
   display: flex;
@@ -92,28 +47,6 @@ p,
 #step5 .checklist {
   line-height: 20px;
   font-size: 15px;
-}
-#step5 .info,
-#step6 .info {
-  padding: 2px 1px;
-  border: 1px solid #535050;
-  margin: 10px 0;
-  background-color: #b99696;
-}
-
-#step6 input,
-#step6 select {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-.dealership-info {
-  display: flex;
-  gap: 5px;
-  flex-wrap: wrap;
-  justify-content: space-around;
 }
 
 /* Layout convenient css */

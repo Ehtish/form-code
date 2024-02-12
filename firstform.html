@@ -1420,7 +1420,241 @@
         <button type="button" onclick="previousStep('step14', 'step13')">
           Previous
         </button>
-        <button type="button" onclick="submitForm('step14')">Submit</button>
+        <!-- <button type="button" onclick="submitForm('step14')">Submit</button> -->
+
+        <button type="button" onclick="nextStep('step14', 'step15')">
+          Next
+        </button>
+      </div>
+    </form>
+
+    <!-- Step 15 -->
+    <form id="step15" class="form-step">
+      <div class="flex-cont cs-br">
+        <h2>Step 15-Fee Schedule</h2>
+        <p class="pd-10">The following are the fee structure for services with Credit Horse Inc. loans that apply
+          to all
+          open loan
+          files. Any fees incurred are required to be paid in full within 30 days of incurring the costs. Payments
+          may
+          be made by cheque, cash, or an adjustment to your Automated Funds Transfer (applicable adjustment fees
+          will
+          apply to funds transfer, see below).</p>
+        <!-- Change in Bank Account information for Pre-Authorized Payments -->
+        <div class="flex-row cs-br w-100">
+          <div class="flex-col-3">
+            <label for="changeBankAccount">Change in Bank Account information for Pre-Authorized Payments:</label>
+          </div>
+          <div class="flex-col-3">
+            <label for="amount">$25.00:</label>
+          </div>
+          <div class="flex-col-3">
+            <input type="text" id="finQuest" name="finQuest" class="cs-input" value="For each change" readonly>
+          </div>
+        </div>
+
+        <!-- Pre-Authorized Payment Hold -->
+        <div class="flex-row cs-br w-100">
+          <div class="flex-col-3">
+            <label for="paymentHold">Pre-Authorized Payment Hold:</label>
+          </div>
+          <div class="flex-col-3">
+            <label for="amount">$20.00:</label>
+          </div>
+          <div class="flex-col-3">
+            <input type="text" id="paymentHold" name="paymentHold" class="cs-input"
+              value="First Payment Hold – no fee, For each additional Payment Hold" readonly>
+          </div>
+        </div>
+
+        <!-- Account Balance or Payout Request -->
+        <div class="flex-row cs-br w-100">
+          <div class="flex-col-3">
+            <label for="balanceRequest">Account Balance or Payout Request:</label>
+          </div>
+          <div class="flex-col-3">
+            <label for="amount">$25.00:</label>
+          </div>
+          <div class="flex-col-3">
+            <input type="text" id="balanceRequest" name="balanceRequest" class="cs-input"
+              value="For the first information request - no fee, For each additional request within a Calendar Year"
+              readonly>
+          </div>
+        </div>
+
+        <!-- Returned Payments due to Insufficient Funds or Stop Payment -->
+        <div class="flex-row cs-br w-100">
+          <div class="flex-col-3">
+            <label for="insufficientFunds">Returned Payments due to Insufficient Funds or Stop Payment:</label>
+          </div>
+          <div class="flex-col-3">
+            <label for="amount">$100.00:</label>
+          </div>
+          <div class="flex-col-3">
+            <input type="text" id="insufficientFunds" name="insufficientFunds" class="cs-input"
+              value="For all non-honored payments" readonly>
+          </div>
+        </div>
+
+        <!-- Returned Payments Due to Closed Bank Account -->
+        <div class="flex-row cs-br w-100">
+          <div class="flex-col-3">
+            <label for="closedBankAccount">Returned Payments Due to Closed Bank Account:</label>
+          </div>
+          <div class="flex-col-3">
+            <label for="amount">$50.00:</label>
+          </div>
+          <div class="flex-col-3">
+            <input type="text" id="closedBankAccount" name="closedBankAccount" class="cs-input"
+              value="In addition to the $100 NSF Fee" readonly>
+          </div>
+        </div>
+
+        <!-- Providing Copies of Contracts or any other Loan Documents -->
+        <div class="flex-row cs-br w-100">
+          <div class="flex-col-3">
+            <label for="copyContracts">Providing Copies of Contracts, or any other Loan Documents:</label>
+          </div>
+          <div class="flex-col-3">
+            <label for="amount">$25.00:</label>
+          </div>
+          <div class="flex-col-3">
+            <input type="text" id="copyContracts" name="copyContracts" class="cs-input" value="" readonly>
+          </div>
+        </div>
+
+        <!-- First Insurance Cancellation Notice -->
+        <div class="flex-row cs-br w-100">
+          <div class="flex-col-3">
+            <label for="firstCancellation">First Insurance Cancellation Notice:</label>
+          </div>
+          <div class="flex-col-3">
+            <label for="amount">$25.00:</label>
+          </div>
+          <div class="flex-col-3">
+            <input type="text" id="firstCancellation" name="firstCancellation" class="cs-input" value="" readonly>
+          </div>
+        </div>
+
+        <!-- Second Insurance Cancellation Notice -->
+        <div class="flex-row cs-br w-100">
+          <div class="flex-col-3">
+            <label for="secondCancellation">Second Insurance Cancellation Notice:</label>
+          </div>
+          <div class="flex-col-3">
+            <label for="amount">$50.00:</label>
+          </div>
+          <div class="flex-col-3">
+            <input type="text" id="secondCancellation" name="secondCancellation" class="cs-input" value="" readonly>
+          </div>
+        </div>
+
+        <!-- Third or more Insurance Cancellation Notice -->
+        <div class="flex-row cs-br w-100">
+          <div class="flex-col-3">
+            <label for="thirdCancellation">Third or more Insurance Cancellation Notice:</label>
+          </div>
+          <div class="flex-col-3">
+            <label for="amount">$100.00:</label>
+          </div>
+          <div class="flex-col-3">
+            <input type="text" id="thirdCancellation" name="thirdCancellation" class="cs-input" readonly>
+          </div>
+        </div>
+
+        <!-- Change of Contract Payment Structure from Semi-Monthly to Monthly -->
+        <div class="flex-row cs-br w-100">
+          <div class="flex-col-3">
+            <label for="contractChange">Change of Contract Payment Structure from Semi-Monthly to Monthly:</label>
+          </div>
+          <div class="flex-col-3">
+            <label for="amount">$50.00:</label>
+          </div>
+          <div class="flex-col-3">
+            <input type="text" id="contractChange" name="contractChange" class="cs-input"
+              value="Requires new documents to be signed" readonly>
+          </div>
+        </div>
+
+        <!-- Re-Writing of existing Loan Contract and/or Contract Extension -->
+        <div class="flex-row cs-br w-100">
+          <div class="flex-col-3">
+            <label for="contractRewrite">Re-Writing of existing Loan Contract and/or Contract Extension:</label>
+          </div>
+          <div class="flex-col-3">
+            <label for="amount">$250.00:</label>
+          </div>
+          <div class="flex-col-3">
+            <input type="text" id="contractRewrite" name="contractRewrite" class="cs-input"
+              value="Requires New Contract to be signed" readonly>
+          </div>
+        </div>
+
+        <!-- Repossession of Vehicle (starting at) -->
+        <div class="flex-row cs-br w-100">
+          <div class="flex-col-3">
+            <label for="vehicleRepossession">Repossession of Vehicle (starting at):</label>
+          </div>
+          <div class="flex-col-3">
+            <label for="amount">$750.00:</label>
+          </div>
+          <div class="flex-col-3">
+            <input type="text" id="vehicleRepossession" name="vehicleRepossession" class="cs-input"
+              value="Note additional charges such as vehicle storage, vehicle transportation, Bailiff Retention, Legal Fees, etc. may apply"
+              readonly>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-cont cs-br">
+        <p>Attachments to the contract for goods:</p>
+        <div class="flex-row w-100">
+          <div class="flex-col">
+            <label for="vin">VIN #:</label>
+            <input type="text" id="vin" name="vin" class="cs-input" value="">
+          </div>
+          <div class="flex-col">
+            <label for="year">Year:</label>
+            <input type="text" id="year" name="year" class="cs-input" value="">
+          </div>
+          <div class="flex-col">
+            <label for="make">Make:</label>
+            <input type="text" id="make" name="make" class="cs-input" value="">
+          </div>
+          <div class="flex-col">
+            <label for="model">Model:</label>
+            <input type="text" id="model" name="model" class="cs-input" value="">
+          </div>
+        </div>
+      </div>
+      <div class="flex-cont cs-br">
+        <div class="flex-row w-100">
+          <div class="flex-col">
+            <label for="date">Date:</label>
+            <input type="text" id="date" name="date" class="cs-input" value="">
+          </div>
+          <div class="flex-col">
+            <label for="buyerSignature">Buyer Signature:</label>
+            <input type="text" id="buyerSignature" name="buyerSignature" class="cs-input" value="">
+          </div>
+        </div>
+      </div>
+      <div class="flex-cont cs-br">
+        <div class="flex-col">
+          <!-- empty div used only to create space -->
+        </div>
+        <div class="flex-col">
+          <label for="printName">Print Name:</label>
+          <input type="text" id="printName" name="printName" class="cs-input" value="">
+        </div>
+      </div>
+      <div class="navigation-buttons">
+        <button type="button" onclick="previousStep('step15', 'step14')">
+          Previous
+        </button>
+        <button type="button" onclick="nextStep('step15', 'step16')">
+          Next
+        </button>
       </div>
     </form>
 
